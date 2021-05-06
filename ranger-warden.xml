@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="Warden" type="Archetype" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_RANGER_WARDEN">
+        <supports>Martial Ranger Archetype</supports>
+        <description>
+            <p>All rangers have a deep connection to the wilderness, but wardens delve even further, into the realm of primal mysticism. Wardens are often trained by a druidic circle, in order to serve as the first line of defense between the civilized world and the mysteries of the wild.</p>
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_WARDEN_SPELLCASTING" />
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_WARDEN_DRUIDIC_WARRIOR" />
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_WARDEN_PRIMEVAL_AWARENESS" />
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_WARDEN_VANISH" />
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_WARDEN_PRIMAL_COMMUNION" />
+        </description>
+        <sheet display="false">
+            <description>All rangers have a deep connection to the wilderness, but wardens delve even further, into the realm of primal mysticism. Wardens are often trained by a druidic circle, in order to serve as the first line of defense between the civilized world and the mysteries of the wild.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_WARDEN_SPELLCASTING" level="3" />
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_WARDEN_DRUIDIC_WARRIOR" level="3" />
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_WARDEN_PRIMEVAL_AWARENESS" level="7" />
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_WARDEN_VANISH" level="11" />
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_WARDEN_PRIMAL_COMMUNION" level="15" />
+        </rules>
+    </element>
+    <element name="Spellcasting" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_WARDEN_SPELLCASTING">
+        <description>
+            <p>When you reach 3rd level, you augment your martial prowess with the ability to cast spells.</p>
+            <p class="indent"><strong><em>Cantrips.</em></strong> You learn three cantrips: shillelagh and two other cantrips of your choice from the druid spell list. You learn another druid cantrip of your choice at 10th level. These cantrips become warden spells for you.</p>
+            <p class="indent"><strong><em>Spell Slots.</em></strong> The Warden Spellcasting table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.</p>
+            <p class="indent">For example, if you know the 1st-level spell ensnaring strike and have a 1st-level and a 2nd-level spell slot available, you can cast ensnaring strike using either slot.</p>
+            <p class="indent"><strong><em>Spells Known of 1st Level and Higher.</em></strong> You know three 1st-level spells of your choice from the druid or ranger spell list, two of which must be from the transmutation or conjuration schools. These spells become warden spells for you.</p>
+            <p class="indent">The Spells Known column of the Warden Spellcasting table shows when you learn more druid or ranger spells of 1st level or higher. Each of these spells must be a transmutation or conjuration spell of your choice, and must be of a level for which you have spell slots. For instance, when you reach 7th level in this class, you can learn one new spell of 1st or 2nd level.</p>
+            <p class="indent">The spells you learn at 8th, 14th, and 20th level can come from any school of magic.</p>
+            <p class="indent">Whenever you gain a level in this class, you can replace one of the spells you know with another spell of your choice from the druid or ranger spell list. The new spell must be of a level for which you have spell slots, and it must be a transmutation or conjuration spell, unless you're replacing the spell you gained at 3rd, 8th, 14th, or 20th level from any school of magic.</p>
+            <p class="indent"><strong><em>Spellcasting Ability.</em></strong> Wisdom is your spellcasting ability for your warden spells, since they are derived from your instinctive connection to primal magic. You use your Wisdom whenever a spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a warden spell you cast and when making an attack roll with one.</p>
+            <center>
+                <p><strong>Spell save DC</strong> = 8 + your proficiency bonus + your Wisdom modifier</p>
+                <p><strong>Spell attack modifier</strong> = your proficiency bonus + your Wisdom modifier</p>
+            </center>
+            <p class="indent"><strong><em>Spellcasting Focus.</em></strong> You can use a druidic focus as a spellcasting focus for your warden spells.</p>
+            <h5 class="caption">WARDEN SPELLCASTING</h5>
+			<table class="class-features">
+				<thead>
+					<tr><td class="col-10">Ranger Level</td><td class="col-10">Cantrips Known</td><td class="col-10">Spells Known</td><td>1st</td><td>2nd</td><td>3rd</td><td>4th</td></tr>
+				</thead>
+				<tr><td> 3rd</td><td>3</td><td> 3</td><td>2</td><td>—</td><td>—</td><td>—</td></tr>
+				<tr><td> 4th</td><td>3</td><td> 4</td><td>3</td><td>—</td><td>—</td><td>—</td></tr>
+				<tr><td> 5th</td><td>3</td><td> 4</td><td>3</td><td>—</td><td>—</td><td>—</td></tr>
+				<tr><td> 6th</td><td>3</td><td> 4</td><td>3</td><td>—</td><td>—</td><td>—</td></tr>
+				<tr><td> 7th</td><td>3</td><td> 5</td><td>4</td><td>2</td><td>—</td><td>—</td></tr>
+				<tr><td> 8th</td><td>3</td><td> 6</td><td>4</td><td>2</td><td>—</td><td>—</td></tr>
+				<tr><td> 9th</td><td>3</td><td> 6</td><td>4</td><td>2</td><td>—</td><td>—</td></tr>
+				<tr><td>10th</td><td>4</td><td> 7</td><td>4</td><td>3</td><td>—</td><td>—</td></tr>
+				<tr><td>11th</td><td>4</td><td> 8</td><td>4</td><td>3</td><td>—</td><td>—</td></tr>
+				<tr><td>12th</td><td>4</td><td> 8</td><td>4</td><td>3</td><td>—</td><td>—</td></tr>
+				<tr><td>13th</td><td>4</td><td> 9</td><td>4</td><td>3</td><td>2</td><td>—</td></tr>
+				<tr><td>14th</td><td>4</td><td>10</td><td>4</td><td>3</td><td>2</td><td>—</td></tr>
+				<tr><td>15th</td><td>4</td><td>10</td><td>4</td><td>3</td><td>2</td><td>—</td></tr>
+				<tr><td>16th</td><td>4</td><td>11</td><td>4</td><td>3</td><td>3</td><td>—</td></tr>
+				<tr><td>17th</td><td>4</td><td>11</td><td>4</td><td>3</td><td>3</td><td>—</td></tr>
+				<tr><td>18th</td><td>4</td><td>11</td><td>4</td><td>3</td><td>3</td><td>—</td></tr>
+				<tr><td>19th</td><td>4</td><td>12</td><td>4</td><td>3</td><td>3</td><td>1</td></tr>
+				<tr><td>20th</td><td>4</td><td>13</td><td>4</td><td>3</td><td>3</td><td>1</td></tr>
+			</table>
+        </description>
+        <sheet display="false">
+			<description>You augment your martial prowess with the ability to cast spells.</description>
+		</sheet>
+        <spellcasting name="Ranger Warden" ability="Wisdom" prepare="false" allowReplace="true">
+			<list>(Druid||Ranger),(Transmutation||Conjuration)</list>
+		</spellcasting>
+		<rules>
+			<grant type="Grants" id="ID_INTERNAL_GRANT_MULTICLASS_SPELLCASTING_SLOTS_THIRD" requirements="ID_INTERNAL_GRANT_MULTICLASS"/>
+			<stat name="ranger warden:spellcasting:slots:1" value="2" level="3" />
+			<stat name="ranger warden:spellcasting:slots:1" value="1" level="4" />
+			<stat name="ranger warden:spellcasting:slots:1" value="1" level="7" />
+			<stat name="ranger warden:spellcasting:slots:2" value="2" level="7" />
+			<stat name="ranger warden:spellcasting:slots:2" value="1" level="10" />
+			<stat name="ranger warden:spellcasting:slots:3" value="2" level="13" />
+			<stat name="ranger warden:spellcasting:slots:3" value="1" level="16" />
+			<stat name="ranger warden:spellcasting:slots:4" value="1" level="19" />
+			<select type="Spell" name="Cantrip (Ranger Warden)" supports="Druid, 0" level="3" number="2" spellcasting="Ranger Warden" />
+            <grant type="Spell" id="ID_PHB_SPELL_SHILLELAGH" level="3" spellcasting="Ranger Warden" />
+			<select type="Spell" name="Cantrip (Ranger Warden)" supports="Druid, 0" level="10" number="1" spellcasting="Ranger Warden" />
+			<select type="Spell" name="Spellcasting (Ranger Warden)" supports="($(spellcasting:list)||Druid||Ranger), 1" level="3" number="1" spellcasting="Ranger Warden" />
+			<select type="Spell" name="Spellcasting (Ranger Warden)" supports="$(spellcasting:list), 1" level="3" number="2" spellcasting="Ranger Warden" />
+			<select type="Spell" name="Spellcasting (Ranger Warden)" supports="$(spellcasting:list), $(spellcasting:slots)" level="4" spellcasting="Ranger Warden"/>
+			<select type="Spell" name="Spellcasting (Ranger Warden)" supports="$(spellcasting:list), $(spellcasting:slots)" level="7" spellcasting="Ranger Warden"/>
+			<select type="Spell" name="Spellcasting (Ranger Warden)" supports="(Druid||Ranger||$(spellcasting:list)), $(spellcasting:slots)" level="8" spellcasting="Ranger Warden"/>
+			<select type="Spell" name="Spellcasting (Ranger Warden)" supports="$(spellcasting:list), $(spellcasting:slots)" level="10" spellcasting="Ranger Warden"/>
+			<select type="Spell" name="Spellcasting (Ranger Warden)" supports="$(spellcasting:list), $(spellcasting:slots)" level="11" spellcasting="Ranger Warden"/>
+			<select type="Spell" name="Spellcasting (Ranger Warden)" supports="$(spellcasting:list), $(spellcasting:slots)" level="13" spellcasting="Ranger Warden"/>
+			<select type="Spell" name="Spellcasting (Ranger Warden)" supports="(Druid||Ranger||$(spellcasting:list)), $(spellcasting:slots)" level="14" spellcasting="Ranger Warden"/>
+			<select type="Spell" name="Spellcasting (Ranger Warden)" supports="$(spellcasting:list), $(spellcasting:slots)" level="16" spellcasting="Ranger Warden"/>
+			<select type="Spell" name="Spellcasting (Ranger Warden)" supports="$(spellcasting:list), $(spellcasting:slots)" level="19" spellcasting="Ranger Warden"/>
+			<select type="Spell" name="Spellcasting (Ranger Warden)" supports="(Druid||Ranger||$(spellcasting:list)), $(spellcasting:slots)" level="20" spellcasting="Ranger Warden"/>
+		</rules>
+    </element>
+    <element name="Druidic Warrior" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_WARDEN_DRUIDIC_WARRIOR">
+        <description>
+            <p>Starting at 3rd level, when you cast shillelagh, you can target up to two quarterstaves or clubs that you are holding. The duration of the spell increases to 1 hour. If you are holding a quarterstaff affected by shillelagh in two hands, the damage die increases to a d12.</p>
+            <p class="indent">In addition, when you hit your Hunter's Prey with a spell attack roll from a warden spell, you can add 1d6 to the damage, as you would with a weapon attack.</p>
+        </description>
+        <sheet>
+            <description>When you cast shillelagh, you can target up to two quarterstaves or clubs that you are holding. The duration of the spell increases to 1 hour. If you are holding a quarterstaff affected by shillelagh in two hands, the damage die increases to a d12. In addition, when you hit your Hunter's Prey with a spell attack roll from a warden spell, you can add 1d6 to the damage, as you would with a weapon attack.</description>
+        </sheet>
+    </element>
+    <element name="Primeval Awareness" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_WARDEN_PRIMEVAL_AWARENESS">
+        <description>
+            <p>Beginning at 7th level, you can use your action to focus your awareness on the region around you. For 1 minute, you can sense whether the following types of creatures are present within 1 mile of you (or within up to 6 miles if you are in your favored terrain): aberrations, celestials, dragons, elementals, fey, fiends, undead, and your favored enemy if it's not already on the list; how many there are; and roughly how close they are, though not their exact location.</p>
+            <p class="indent">In addition, you learn speak with animals and beast sense, and can cast either without expending a spell slot. Once you cast either spell with this feature, you can't cast that spell with it again until you finish a long rest.</p>
+        </description>
+        <sheet>
+            <description action="Action">You can use your action to focus your awareness on the region around you. For 1 minute, you can sense whether the following types of creatures are present within 1 mile of you (or within up to 6 miles if you are in your favored terrain): aberrations, celestials, dragons, elementals, fey, fiends, undead, and your favored enemy if it's not already on the list; how many there are; and roughly how close they are, though not their exact location.
+            In addition, you learn speak with animals and beast sense, and can cast either without expending a spell slot. Once you cast either spell with this feature, you can't cast that spell with it again until you finish a long rest.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_SPEAK_WITH_ANIMALS" spellcasting="Ranger Warden" />
+            <grant type="Spell" id="ID_PHB_SPELL_BEAST_SENSE" spellcasting="Ranger Warden" />
+        </rules>
+    </element>
+    <element name="Vanish" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_WARDEN_VANISH">
+        <description>
+            <p>Starting at 11th level, you can draw on the powers of nature to hide yourself from view briefly. As a bonus action, you can magically become invisible, along with any equipment you are wearing or carrying, for 1 minute in non-natural terrain, 10 minutes in natural terrain, and one hour in your favored terrain. The effect ends if you take damage or make an attack.</p>
+            <p class="indent">You can use this feature a number of times equal to your Wisdom modifier, and you regain all expended uses when you finish a long rest.</p>
+        </description>
+        <sheet>
+            <description action="Bonus Action" usage="{{wisdom:modifier}}/Long Rest">As a bonus action, you can magically become invisible, along with any equipment you are wearing or carrying, for 1 minute in non-natural terrain, 10 minutes in natural terrain, and one hour in your favored terrain. The effect ends if you take damage or make an attack.</description>
+        </sheet>
+    </element>
+    <element name="Primal Communion" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_WARDEN_PRIMAL_COMMUNION">
+        <description>
+            <p>Beginning at 15th level, you learn speak with plants, locate creature and commune with nature, and you can cast each one once without expending a spell slot. Once you cast one of these spells with this feature, you can't cast that spell with it again until you finish a long rest.</p>
+        </description>
+        <sheet>
+            <description>You learn speak with plants, locate creature and commune with nature, and you can cast each one once without expending a spell slot. Once you cast one of these spells with this feature, you can't cast that spell with it again until you finish a long rest.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_SPEAK_WITH_PLANTS" spellcasting="Ranger Warden" />
+            <grant type="Spell" id="ID_PHB_SPELL_COMMUNE_WITH_NATURE" spellcasting="Ranger Warden" />
+            <grant type="Spell" id="ID_PHB_SPELL_LOCATE_CREATURE" spellcasting="Ranger Warden" />
+        </rules>
+    </element>
+    
+</elements>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="Monster Slayer" type="Archetype" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_RANGER_MONSTER_SLAYER">
+        <supports>Martial Ranger Archetype</supports>
+        <description>
+            <p>You have dedicated yourself to hunting down creatures of the night and wielders of grim magic. A monster slayer seeks out vampires, dragons, evil fey, fiends, and other magical threats. Trained to resist such monsters' supernatural powers, slayers are experts at unearthing and defeating mighty, mystical foes.</p>
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_MONSTER_SLAYER_MONSTER_EXPERT" />
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_MONSTER_SLAYER_SLAYERS_INSIGHT" />
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_MONSTER_SLAYER_IRON_MIND" />
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_MONSTER_SLAYER_MAGIC_USERS_NEMESIS" />
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_MONSTER_SLAYER_SLAYERS_COUNTER" />
+        </description>
+        <sheet display="false">
+            <description>You have dedicated yourself to hunting down creatures of the night and wielders of grim magic.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_MONSTER_SLAYER_MONSTER_EXPERT" level="3" />
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_MONSTER_SLAYER_SLAYERS_INSIGHT" level="3" />
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_MONSTER_SLAYER_IRON_MIND" level="7" />
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_MONSTER_SLAYER_MAGIC_USERS_NEMESIS" level="11" />
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_MONSTER_SLAYER_SLAYERS_COUNTER" level="15" />
+        </rules>
+    </element>
+    <element name="Monster Expert" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_MONSTER_SLAYER_MONSTER_EXPERT">
+        <description>
+            <p>You have an encyclopedic knowledge of all things strange and supernatural. At 3rd level, you gain proficiency in the Arcana and Religion skills, and your proficiency bonus is doubled for one of these skills (your choice).</p>
+        </description>
+        <sheet>
+            <description>You gain proficiency in the Arcana and Religion skills, and your proficiency bonus is doubled for one of these skills (your choice).</description>
+        </sheet>
+        <rules>
+            <stat name="arcana:proficiency" value="proficiency" bonus="double" />
+            <stat name="religion:proficiency" value="proficiency" bonus="double" />
+        </rules>
+    </element>
+    <element name="Slayer's Insight" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_MONSTER_SLAYER_SLAYERS_INSIGHT">
+        <description>
+            <p>At 3rd level, your eye is keenly trained on how best to hurt even the most exotic of creatures. When you use Hunter's Prey on a creature you can see within 60 feet of you, you can make an Intelligence check (Nature, Arcana, etc. depending on the creature type) (DC equals 10 + half the target's CR). If you succeed, you immediately learn whether the creature has any damage immunities, resistances, or vulnerabilities and what they are, and you deal an additional 1d4 damage on your first weapon attack against that creature and others with the same name each turn until your next long rest.</p>
+        </description>
+        <sheet>
+            <description>When you use Hunter's Prey on a creature you can see within 60 feet of you, you can make an Intelligence check (Nature, Arcana, etc. depending on the creature type) (DC equals 10 + half the target's CR). If you succeed, you immediately learn whether the creature has any damage immunities, resistances, or vulnerabilities and what they are, and you deal an additional 1d4 damage on your first weapon attack against that creature and others with the same name each turn until your next long rest.</description>
+        </sheet>
+    </element>
+    <element name="Iron Mind" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_MONSTER_SLAYER_IRON_MIND">
+        <description>
+            <p>By 7th level, you have honed your ability to resist the mind-altering powers of your quarry. You gain proficiency in Wisdom saving throws. If you already have this proficiency, you instead gain proficiency in Intelligence or Charisma saving throws (your choice).</p>
+        </description>
+        <sheet>
+            <description>You gain proficiency in Wisdom saving throws. If you already have this proficiency, you instead gain proficiency in Intelligence or Charisma saving throws (your choice).</description>
+        </sheet>
+        <rules>
+            <select type="Proficiency" name="Iron Mind" supports="ID_PROFICIENCY_SAVINGTHROW_WISDOM|ID_PROFICIENCY_SAVINGTHROW_CHARISMA|ID_PROFICIENCY_SAVINGTHROW_INTELLIGENCE" default="ID_PROFICIENCY_SAVINGTHROW_WISDOM" />
+        </rules>
+    </element>
+    <element name="Magic-User's Nemesis" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_MONSTER_SLAYER_MAGIC_USERS_NEMESIS">
+        <description>
+            <p>At 11th level, you gain the ability to thwart someone else's magic. When you see a creature casting a spell or teleporting within 60 feet of you, you can use your reaction to make an attack against that creature with a weapon you are holding. If the attack hits, the creature must succeed on a Constitution saving throw (DC = 8 + your Wisdom modifier + your proficiency bonus), or its spell or teleport fails and is wasted.</p>
+            <p class="indent">Once you use this feature, you can't use it again until you finish a short or long rest.</p>
+        </description>
+        <sheet>
+            <description action="Reaction" usage="1/Short Rest">When you see a creature casting a spell or teleporting within 60 feet of you, you can use your reaction to make an attack against that creature with a weapon you are holding. If the attack hits, the creature must succeed on a Constitution saving throw (DC {{mun:save}}), or its spell or teleport fails and is wasted.</description>
+        </sheet>
+        <rules>
+            <stat name="mun:save" value="8" />
+            <stat name="mun:save" value="wisdom:modifier" />
+            <stat name="mun:save" value="proficiency" />
+        </rules>
+    </element>
+    <element name="Slayer's Counter" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_MONSTER_SLAYER_SLAYERS_COUNTER">
+        <description>
+            <p>At 15th level, you gain the ability to counterattack when your prey tries to sabotage you. If your Hunter's Prey forces you to make a saving throw, you can use your reaction to make one weapon attack against the prey. You make this attack immediately before making the saving throw. If the attack hits, your save automatically succeeds, in addition to the attack’s normal effects.</p>
+        </description>
+        <sheet>
+            <description action="Reaction">If your Hunter's Prey forces you to make a saving throw, you can use your reaction to make one weapon attack against the prey. You make this attack immediately before making the saving throw. If the attack hits, your save automatically succeeds, in addition to the attack’s normal effects.</description>
+        </sheet>
+    </element>
+    
+</elements>

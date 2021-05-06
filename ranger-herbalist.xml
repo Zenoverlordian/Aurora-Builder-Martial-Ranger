@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="Herbalist" type="Archetype" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_RANGER_HERBALIST">
+        <supports>Martial Ranger Archetype</supports>
+        <description>
+            <p>Herbalists are masters of foraging, able to quickly spot and identify useful plants and craft potent medicines from them.</p>
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_FORAGER" />
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_HERBAL_ADEPT" />
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_RESILIENT_CONSTITUTION" />
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_POISONER" />
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_HERBAL_MASTER" />
+        </description>
+        <sheet display="false">
+            <description>Herbalists are masters of foraging, able to quickly spot and identify useful plants and craft potent medicines from them.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_FORAGER" level="3" />
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_HERBAL_ADEPT" level="3" />
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_RESILIENT_CONSTITUTION" level="7" />
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_POISONER" level="11" />
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_HERBAL_MASTER" level="15" />
+        </rules>
+    </element>
+    <element name="Forager" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_FORAGER">
+        <description>
+            <p>At 3rd level, you halve the time needed to find herbs using Natural Healer to thirty minutes per day, and the Natural Healer DC of all terrain types is decreased for you by 5. The number of healing poultices you can produce per day increases to 2 + your Wisdom modifier, or half that number on a failed Survival check (rounded down).</p>
+        </description>
+        <sheet>
+            <description>You halve the time needed to find herbs using Natural Healer to thirty minutes per day, and the Natural Healer DC of all terrain types is decreased for you by 5. The number of healing poultices you can produce per day increases to {{herbalist:forager}}, or half that on a failed Survival check (rounded down).</description>
+        </sheet>
+        <rules>
+            <stat name="herbalist:forager" value="2" />
+            <stat name="herbalist:forager" value="wisdom:modifier" />
+        </rules>
+    </element>
+    <element name="Herbal Adept" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_HERBAL_ADEPT">
+        <description>
+            <p>Starting at 3rd level, add your Wisdom modifier to the healing provided by healing poultices you produce. Your proficiency bonus is doubled for any skill check you make with an herbalist's kit, and you have proficiency in the Medicine skill if you did not already.</p>
+        </description>
+        <sheet>
+            <description>Add {{wisdom:modifier}} to the healing provided by healing poultices you produce. Your proficiency bonus is doubled for any skill check you make with an herbalist's kit.</description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_MEDICINE" />
+        </rules>
+    </element>
+    <element name="Resilient Constitution" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_RESILIENT_CONSTITUTION">
+        <description>
+            <p>At 7th level, your experience surviving on wild forage in the wilderness has made you hardy. You gain proficiency in Constitution saving throws, and have advantage on saving throws against being poisoned.</p>
+        </description>
+        <sheet>
+            <description>You have advantage on saving throws against being poisoned.</description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_CONSTITUTION" />
+        </rules>
+    </element>
+    <element name="Poisoner" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_POISONER">
+        <description>
+            <p>The studies of cures and poisons are inextricably linked, and you have learned how one can be repurposed into the other. Starting at 11th level, you can expend one healing poultice to craft a venomous coating for your weapons. For the next hour, when you hit a creature with a weapon attack, you can force the creature to make a Constitution saving throw (DC = 8 + your Wisdom modifier + your proficiency bonus). On a failed save, the creature is poisoned for 1d4 rounds. You can also use your herbalism kit to craft poisons.</p>
+        </description>
+        <sheet>
+            <description>You can expend one healing poultice to craft a venomous coating for your weapons. For the next hour, when you hit a creature with a weapon attack, you can force the creature to make a Constitution saving throw (DC {{poisoner:save}}). On a failed save, the creature is poisoned for 1d4 rounds. You can also use your herbalism kit to craft poisons.</description>
+        </sheet>
+        <rules>
+            <stat name="poisoner:save" value="8" />
+            <stat name="poisoner:save" value="wisdom:modifier" />
+            <stat name="poisoner:save" value="proficiency" />
+        </rules>
+    </element>
+    <element name="Herbal Master" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_HERBAL_MASTER">
+        <description>
+            <p>Your medicines have become more advanced and versatile, even soothing the mind as well as the body. Starting at 15th level, if your healing poultices are applied to a creature that is poisoned, paralyzed, blinded, deafened, frightened or charmed, any and all of those conditions immediately end on that creature.</p>
+        </description>
+        <sheet>
+            <description>If your healing poultices are applied to a creature that is poisoned, paralyzed, blinded, deafened, frightened or charmed, any and all of those conditions immediately end on that creature.</description>
+        </sheet>
+    </element>
+    
+</elements>

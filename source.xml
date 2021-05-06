@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="The Martial Ranger" type="Source" source="The Martial Ranger" id="ID_AGENDERARCEE_MARTIALRANGER_SOURCE_MARTIAL_RANGER">
+        <description>
+            <![CDATA[<p>I've always really liked the idea of a character who fits the ranger archetype - a master of the wilderness, highly skilled at tracking and foraging, a precise and deadly hunter - without having to be a half-druid. I'm definitely not opposed to the magical ranger, I just feel like there's room for the mundane kind, too.</p>
+            <p class="indent">The Scout rogue does a pretty good job - a mobile ambusher at home in the wild - but it's missing something. It still plays like a rogue, focused on getting one big Sneak Attack off per turn, whereas the ranger is traditionally more about multiple quick attacks. Also, the only actual nature-specific flavor is one 3rd-level trait, which is just extra Expertise - not terrible, but a bit bland.</p>
+            <p class="indent">Early on in 5e's lifespan, a spell-less ranger rework was proposed in the Modifying Classes UA article. This was a decent attempt, but mostly served to turn the ranger into a Battle Master with some healing capability and poison resistance. Call Natural Allies also feels too much like magic to me. It also does nothing to address the classic complaints about the 5e ranger, namely that their class features are too niche and weak, mostly focused around exploration rules that often get ignored anyway.</p>
+            <p class="indent">In 2019, Pathfinder Second Edition released with a new version of the ranger that was quite well-received, and notably did not automatically have spells (which could later be obtained through feats). This followed in the tradition of the Fourth Edition ranger. This ranger has an innate hunter's mark-like feature called Hunt Prey, which has one of three effects based on your choice of Hunter's Edge feature, taking the place of a subclass. This ability, and several later features and feats of the class, provided some great inspiration for what a spell-less ranger can look like.</p>
+            <p class="indent">Then, Tasha's Cauldron of Everything came out and included some nice enhancements for the 5e ranger class via variant features. I liked the additions provided by Deft Explorer, but wasn't a fan of how they replaced Natural Explorer altogether - I think it's best to keep that niche exploration flavor but buff it to be more useful in a combat-focused game. Additionally, a lot of Tasha's improvements add extra spells or magical effects - see how the Beast Master now uses a primal spirit instead of a trained animal - turning the ranger into what increasingly feels like a druid with a bow.</p>
+            <p class="indent">Despite my dalliance with Pathfinder I still love D&D Fifth Edition, and I wanted to be make this kind of ranger available to 5e players. It's meant to be a robust martial class, with mechanics that are engaging but also easy to use. I kept a close eye on the other martial classes in the game, to make sure that this ranger could keep up with them without stepping on their toes, and could complement them through multiclassing without being too powerful.</p>
+            <p class="indent">Keeping all these inspirations and considerations in mind, and doing my best to make up for lost spell utility while staying in balance with all other classes, I give you the Martial Ranger. I hope you enjoy!</p>]]>
+        </description>
+        <setters>
+            <set name="abbreviation">MartialRanger</set>
+            <set name="url">https://www.gmbinder.com/share/-MTSf1NxHva3nZH6U45C</set>
+            <set name="image">https://www.gmbinder.com/images/dB9Yzky.jpg</set>
+            <set name="author" abbreviation="AGENDERARCEE" url="https://www.reddit.com/user/agenderarcee">/u/agenderarcee</set>
+            <set name="official">false</set>
+            <set name="supplement">false</set>
+            <set name="playtest">false</set>
+            <set name="third-party">false</set>
+            <set name="homebrew">true</set>
+            <set name="league">false</set>
+            <set name="release">20200118</set>
+        </setters>
+    </element>
+    
+</elements>

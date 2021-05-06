@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="Trapper" type="Archetype" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_RANGER_TRAPPER">
+        <supports>Martial Ranger Archetype</supports>
+        <description>
+            <p>Some rangers prefer to let their quarry come to them, setting cunning traps for unsuspecting prey. Trappers use snares not only to catch prey, but also to track them, and to alert themselves to approaching danger. Skilled trappers can even rig together a half-readied snare in combat, turning a simple melee into a minefield.</p>
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_SNARECRAFTER" />
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_TRAP_FINDER" />
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_QUICK_SNARES" />
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_ADVANCED_SNARECRAFTER" />
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_SNARE_MASTER" />
+        </description>
+        <sheet display="false">
+            <description>Trappers use snares not only to catch prey, but also to track them, and to alert themselves to approaching danger.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_SNARECRAFTER" level="3" />
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_TRAP_FINDER" level="3" />
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_QUICK_SNARES" level="7" />
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_ADVANCED_SNARECRAFTER" level="11" />
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_SNARE_MASTER" level="15" />
+        </rules>
+    </element>
+    <element name="Snarecrafter" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_SNARECRAFTER">
+        <description>
+            <p>At 3rd level, you gain proficiency with tinker's tools, and you learn to craft two snares of your choice from the Basic Snares list (next page). You learn two more Basic Snares at 7th level.</p>
+            <p class="indent">A snare is built within a single 5-foot square. Once constructed, it can’t be moved without destroying or triggering the snare.</p>
+            <p class="indent">Crafting a snare takes one minute and requires you to be holding tinker's tools in both hands. You can have a number of snares crafted equal to your proficiency bonus.</p>
+            <p class="indent">Your snare DC equals 8 + your proficiency bonus + your Wisdom modifier. All saving throws and checks triggered by snares use your snare DC. You can choose whether the snare is visible or hidden; if you choose hidden, a creature must succeed at a Perception or Investigation check against your snare DC to find it.</p>
+        </description>
+        <sheet>
+            <description>A snare is built within a single 5-foot square. Once constructed, it can’t be moved without destroying or triggering the snare. Crafting a snare takes one minute and requires you to be holding tinker's tools in both hands. You can have {{snarecrafter:num}} snares crafted.
+            Your snare DC equals {{snarecrafter:dc}}. All saving throws and checks triggered by snares use your snare DC. You can choose whether the snare is visible or hidden; if you choose hidden, a creature must succeed at a Perception or Investigation check against your snare DC to find it.</description>
+        </sheet>
+        <rules>
+            <select type="Archetype Feature" name="Snarecrafter (3)" supports="Martial Basic Snares" number="2" level="3" />
+            <select type="Archetype Feature" name="Snarecrafter (7)" supports="Martial Basic Snares" number="2" level="7" />
+            <stat name="snarecrafter:dc" value="8" />
+            <stat name="snarecrafter:dc" value="proficiency" />
+            <stat name="snarecrafter:dc" value="wisdom:modifier" />
+            <stat name="snarecrafter:num" value="proficiency" level="3" />
+            <stat name="snarecrafter:num" value="proficiency" level="15" />
+        </rules>
+    </element>
+    <element name="Trap Finder" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_TRAP_FINDER">
+        <description>
+            <p>Your expertise in making traps makes them easy to spot for you. Starting at 3rd level, you have advantage on Perception or Investigation checks to find hidden traps.</p>
+        </description>
+        <sheet>
+            <description>You have advantage on Perception or Investigation checks to find hidden traps.</description>
+        </sheet>
+    </element>
+    <element name="Quick Snares" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_QUICK_SNARES">
+        <description>
+            <p>Starting at 7th level, you can rig a snare in only moments. You can craft snares that normally take 1 minute using one action. The snare is visible unless you use a bonus action to hide it, which requires a successful Stealth check against nearby enemies' passive Perception.</p>
+        </description>
+        <sheet>
+            <description>You can craft snares that normally take 1 minute using one action. The snare is visible unless you use a bonus action to hide it, which requires a successful Stealth check against nearby enemies' passive Perception.</description>
+        </sheet>
+    </element>
+    <element name="Advanced Snarecrafter" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_ADVANCED_SNARECRAFTER">
+        <description>
+            <p>At 11th level, you begin to experiment with more powerful and dangerous snares. You learn how to craft two snares from the Advanced Snares list. You cannot use Quick Snares with Advanced Snares.</p>
+        </description>
+        <sheet>
+            <description>You cannot use Quick Snares with Advanced Snares.</description>
+        </sheet>
+        <rules>
+            <select type="Archetype Feature" name="Advanced Snarecrafter" supports="Martial Advanced Snares" number="2" />
+        </rules>
+    </element>
+    <element name="Snare Master" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_SNARE_MASTER">
+        <description>
+            <p>At 15th level, double the number of snares you can have crafted at a single time. Once per turn, when you use the Attack action, you can craft a snare in place of one of your attacks, rather than using a full action. You can craft both Basic and Advanced Snares in this way, or by using an action.</p>
+        </description>
+        <sheet>
+            <description action="Reaction">Once per turn, when you use the Attack action, you can craft a snare in place of one of your attacks, rather than using a full action. You can craft both Basic and Advanced Snares in this way, or by using an action.</description>
+        </sheet>
+    </element>
+
+    <!--SNARES-->
+
+    <element name="Alarm Snare" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_BSNARE_ALARM_SNARE">
+        <supports>Martial Basic Snares</supports>
+        <description>
+            <p>You create an alarm snare by rigging one or more noisy objects to a trip wire or pressure plate. When a Small or larger creature enters the square, the snare makes a noise loud enough that it can be heard by all creatures within 200 feet.</p>
+        </description>
+        <sheet>
+            <description>When a Small or larger creature enters the square, the snare makes a noise loud enough that it can be heard by all creatures within 200 feet.</description>
+        </sheet>
+    </element>
+    <element name="Hampering Snare" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_BSNARE_HAMPERING_SNARE">
+        <supports>Martial Basic Snares</supports>
+        <description>
+            <p>You arrange brambles, wires, sticky goo, or other materials to interfere with a creature’s movement. A five-foot radius circle of difficult terrain forms when this snare is triggered. A creature can use its action to clear the difficult terrain from one five-foot square they are standing on or adjacent to.</p>
+        </description>
+        <sheet>
+            <description>A five-foot radius circle of difficult terrain forms when this snare is triggered. A creature can use its action to clear the difficult terrain from one five-foot square they are standing on or adjacent to.</description>
+        </sheet>
+    </element>
+    <element name="Hobbling Snare" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_BSNARE_HOBBLING">
+        <supports>Martial Basic Snares</supports>
+        <description>
+            <p>You rig vines, ropes, or wires to cinch tight around a creature that triggers this snare. It must succeed on a Dexterity saving throw or have its speed halved for 1 minute, or until it uses an action to untangle itself.</p>
+        </description>
+        <sheet>
+            <description>You rig vines, ropes, or wires to cinch tight around a creature that triggers this snare. It must succeed on a Dexterity saving throw or have its speed halved for 1 minute, or until it uses an action to untangle itself.</description>
+        </sheet>
+    </element>
+    <element name="Marking Snare" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_BSNARE_MARKING">
+        <supports>Martial Basic Snares</supports>
+        <description>
+            <p>A snare used to track or identify. On a failed Dexterity saving throw it marks the triggering creature with a sticky dye or scent marker, ranging from a small mark to a bucket of paint. The creature is marked for 24 hours or until it washes itself for ten minutes.</p>
+        </description>
+        <sheet>
+            <description>A snare used to track or identify. On a failed Dexterity saving throw it marks the triggering creature with a sticky dye or scent marker, ranging from a small mark to a bucket of paint. The creature is marked for 24 hours or until it washes itself for ten minutes.</description>
+        </sheet>
+    </element>
+    <element name="Signaling Snare" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_BSNARE_SIGNALING">
+        <supports>Martial Basic Snares</supports>
+        <description>
+            <p>A subtle snare that does not reveal itself when triggered or affect the triggering creature, but instead causes a small disruption to the terrain that can be used for tracking.</p>
+        </description>
+        <sheet>
+            <description>A subtle snare that does not reveal itself when triggered or affect the triggering creature, but instead causes a small disruption to the terrain that can be used for tracking.</description>
+        </sheet>
+    </element>
+    <element name="Spike Snare" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_BSNARE_SPIKE">
+        <supports>Martial Basic Snares</supports>
+        <description>
+            <p>This basic snare consists of hidden spikes that rely on a creature’s momentum to lacerate or potentially impale it when it triggers the snare. The creature must attempt a Dexterity saving throw or take 2d8 piercing damage, or half that much on a successful save. The snare counts as difficult terrain.</p>
+        </description>
+        <sheet>
+            <description>This basic snare consists of hidden spikes that rely on a creature’s momentum to lacerate or potentially impale it when it triggers the snare. The creature must attempt a Dexterity saving throw or take 2d8 piercing damage, or half that much on a successful save. The snare counts as difficult terrain.</description>
+        </sheet>
+    </element>
+    <element name="Trip Snare" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_BSNARE_TRIP">
+        <supports>Martial Basic Snares</supports>
+        <description>
+            <p>You set a cunning wire to trip a creature. A creature that triggers the snare must make a Dexterity saving throw or fall prone until its next turn. The snare counts as difficult terrain, even on a success.</p>
+        </description>
+        <sheet>
+            <description>A creature that triggers the snare must make a Dexterity saving throw or fall prone until its next turn. The snare counts as difficult terrain, even on a success.</description>
+        </sheet>
+    </element>
+
+    <element name="Biting Snare" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_ASNARE_BITING">
+        <supports>Martial Advanced Snares</supports>
+        <description>
+            <p>A snare whose jaws shut tight on the leg of a creature that steps on it. The creature must succeed at a Dexterity saving throw or take 6d6 piercing damage, or half as much on a successful save, and have its speed halved until it succeeds at an Athletics check to remove the snare.</p>
+        </description>
+        <sheet>
+            <description>A snare whose jaws shut tight on the leg of a creature that steps on it. The creature must succeed at a Dexterity saving throw or take 6d6 piercing damage, or half as much on a successful save, and have its speed halved until it succeeds at an Athletics check to remove the snare.</description>
+        </sheet>
+    </element>
+    <element name="Bomb Snare" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_ASNARE_BOMB">
+        <supports>Martial Advanced Snares</supports>
+        <description>
+            <p>An alchemical incendiary readied to blow. Upon this snare being triggered, every creature within a 10-foot radius must succeed at a Dexterity saving throw or take 6d6 fire damage, or half as much on a success.</p>
+        </description>
+        <sheet>
+            <description>An alchemical incendiary readied to blow. Upon this snare being triggered, every creature within a 10-foot radius must succeed at a Dexterity saving throw or take 6d6 fire damage, or half as much on a success.</description>
+        </sheet>
+    </element>
+    <element name="Poison Dart Snare" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_ASNARE_POISON_DART">
+        <supports>Martial Advanced Snares</supports>
+        <description>
+            <p>A pressure plate or tripwire triggers a volley of poison-tipped darts. Each creature within a 10-foot radius of the snare must succeed at a Dexterity saving throw or take 1d4 piercing damage and 2d8 poison damage, and succeed at a Constitution saving throw or gain the poisoned condition for 1d4 rounds.</p>
+        </description>
+        <sheet>
+            <description>A pressure plate or tripwire triggers a volley of poison-tipped darts. Each creature within a 10-foot radius of the snare must succeed at a Dexterity saving throw or take 1d4 piercing damage and 2d8 poison damage, and succeed at a Constitution saving throw or gain the poisoned condition for 1d4 rounds.</description>
+        </sheet>
+    </element>
+    <element name="Stunning Snare" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_ASNARE_STUNNING">
+        <supports>Martial Advanced Snares</supports>
+        <description>
+            <p>A weight swings down to bash the triggering creature senseless. It must succeed at a Dexterity saving throw or take 6d6 bludgeoning damage and be stunned until the end of its next turn.</p>
+        </description>
+        <sheet>
+            <description>A weight swings down to bash the triggering creature senseless. It must succeed at a Dexterity saving throw or take 6d6 bludgeoning damage and be stunned until the end of its next turn.</description>
+        </sheet>
+    </element>
+    
+</elements>

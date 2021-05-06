@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="Bounty Hunter" type="Archetype" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_RANGER_BOUNTY_HUNTER">
+        <supports>Martial Ranger Archetype</supports>
+        <description>
+            <p>While you are as at home in the wilds as any ranger, your hunt has brought you into jungles of brick and mortar, where you stalk the most dangerous game: people. You have learned how to navigate cities and towns which have set themselves apart from the natural world; learned to blend in among its citizens and ferret out their secrets. You understand that civilization, after all, is simply another form of nature to master.</p>
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BOUNTY_URBAN_RANGER" />
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BOUNTY_GUMSHOE" />
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BOUNTY_PARANOID_VIGILANCE" />
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BOUNTY_SNEAK_ATTACKER" />
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BOUNTY_EYE_FOR_AN_EYE" />
+        </description>
+        <sheet display="false">
+            <description>You have learned how to navigate cities and towns which have set themselves apart from the natural world; learned to blend in among its citizens and ferret out their secrets.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BOUNTY_URBAN_RANGER" level="3" />
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BOUNTY_GUMSHOE" level="3" />
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BOUNTY_PARANOID_VIGILANCE" level="7" />
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BOUNTY_SNEAK_ATTACKER" level="11" />
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BOUNTY_EYE_FOR_AN_EYE" level="15" />
+        </rules>
+    </element>
+    <element name="Urban Ranger" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BOUNTY_URBAN_RANGER">
+        <description>
+            <p>At 3rd level, you gain a unique type of favored terrain: urban, characterized by artificial buildings and streets. This does not count against your maximum favored terrains.</p>
+            <p class="indent">Because of the dearth of native plant life, you cannot gather herbs for Natural Healer in this terrain; however, you can always find a local herbalist or apothecary who can sell you the necessary herbs to produce your healing poultices; once per day, you can produce up to your Wisdom modifier as part of a short rest, at the cost of 1 gp per healing poultice (the combined cost of the requisite herbs).</p>
+            <p class="indent">In addition, you gain the City Secrets feature from the urchin background in the Player's Handbook.</p>
+            <p class="indent">At 9th level, you gain the following Favored Terrain Master benefit, as you can disappear into a crowd or alleyway as easily as you do into a forest or cavern:</p>
+            <ul>
+                <li><strong><em>Urban.</em></strong> You can hide while only lightly obscured, such as by fog or shadows, and urban environments are considered natural terrain for you.</li>
+            </ul>
+        </description>
+        <sheet>
+            <description usage="1/Long Rest">You cannot gather herbs for Natural Healer in the Urban terrain; however, you can always find a local herbalist or apothecary who can sell you the necessary herbs to produce your healing poultices; once per day, you can produce up to {{wisdom:modifier}} as part of a short rest, at the cost of 1 gp per healing poultice (the combined cost of the requisite herbs).</description>
+        </sheet>
+        <rules>
+            <grant type="Class Feature" id="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_FAVORED_TERRAIN_URBAN" />
+            <grant type="Background Feature" id="ID_BACKGROUND_FEATURE_CITY_SECRETS" />
+        </rules>
+    </element>
+    <element name="Urban" type="Class Feature" source="The Martial Ranger" id="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_FAVORED_TERRAIN_URBAN">
+        <description>
+            <p>When you make an Intelligence or Wisdom check related to this terrain or the creatures that dwell here, you have advantage on the check if you are using a skill that you’re proficient in. When in this terrain, you can ignore the effects of non-magical difficult terrain, and all enemies that attempt to track you by non-magical means have disadvantage. You can also move stealthily at a normal pace.</p>
+        </description>
+        <sheet>
+            <description level="1">When you make an Intelligence or Wisdom check related to this terrain or the creatures that dwell here, you have advantage on the check if you are using a skill that you’re proficient in. When in this terrain, you can ignore the effects of non-magical difficult terrain, and all enemies that attempt to track you by non-magical means have disadvantage. You can also move stealthily at a normal pace.</description>
+            <description level="9">When you make an Intelligence or Wisdom check related to this terrain or the creatures that dwell here, you have advantage on the check if you are using a skill that you’re proficient in. When in this terrain, you can ignore the effects of non-magical difficult terrain, and all enemies that attempt to track you by non-magical means have disadvantage. You can also move stealthily at a normal pace.
+            You can hide while only lightly obscured, such as by fog or shadows, and urban environments are considered natural terrain for you.</description>
+        </sheet>
+    </element>
+    <element name="Gumshoe" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BOUNTY_GUMSHOE">
+        <description>
+            <p>At 3rd level, you gain proficiency in the Investigation skill, and your proficiency bonus is doubled for ability checks made with this skill. You also have proficiency with thieves' tools and disguise kits.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="investigation:proficiency" value="proficiency" bonus="double" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_THIEVES_TOOLS" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_DISGUISE_KIT" />
+        </rules>
+    </element>
+    <element name="Paranoid Vigilance" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BOUNTY_PARANOID_VIGILANCE">
+        <description>
+            <p>Surrounded by potential threats in close quarters, you are constantly on alert and ready to fight. Starting at 7th level, you have advantage on initiative rolls. While you are surprised you can take reactions, and can take the Dodge action as a reaction when initiative is rolled. You also have advantage on attack rolls against creatures that are surprised.</p>
+        </description>
+        <sheet>
+            <description>You have advantage on initiative rolls. While you are surprised you can take reactions, and can take the Dodge action as a reaction when initiative is rolled. You also have advantage on attack rolls against creatures that are surprised.</description>
+        </sheet>
+    </element>
+    <element name="Sneak Attacker" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BOUNTY_SNEAK_ATTACKER">
+        <description>
+            <p>You strike without warning, dispatching your quarry before they can even see your face. Starting at 11th level, once per turn, you can deal an additional 2d6 damage to a creature with a weapon attack if you have advantage on the attack roll.</p>
+        </description>
+        <sheet>
+            <description>Once per turn, you can deal an additional 2d6 damage to a creature with a weapon attack if you have advantage on the attack roll.</description>
+        </sheet>
+    </element>
+    <element name="Eye for an Eye" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BOUNTY_EYE_FOR_AN_EYE">
+        <description>
+            <p>At 15th level, experienced in street violence, you respond to injury in kind. If you are hit with a weapon attack by a creature you can see, you can use your reaction to make one weapon attack against that creature.</p>
+        </description>
+        <sheet>
+            <description action="Reaction">If you are hit with a weapon attack by a creature you can see, you can use your reaction to make one weapon attack against that creature.</description>
+        </sheet>
+    </element>
+    
+</elements>
