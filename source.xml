@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+    <info>
+        <name></name>
+        <update version="4.1.0">
+            <file name="source.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Martial-Ranger/main/source.xml" />
+        </update>
+    </info>
     
     <element name="The Martial Ranger" type="Source" source="The Martial Ranger" id="ID_AGENDERARCEE_MARTIALRANGER_SOURCE_MARTIAL_RANGER">
         <description>

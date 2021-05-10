@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+    <info>
+        <name></name>
+        <update version="4.1.0">
+            <file name="ranger-warden.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Martial-Ranger/main/ranger-warden.xml" />
+        </update>
+    </info>
     
     <element name="Warden" type="Archetype" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_RANGER_WARDEN">
         <supports>Martial Ranger Archetype</supports>

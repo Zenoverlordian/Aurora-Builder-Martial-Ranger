@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+    <info>
+        <name></name>
+        <update version="4.1.0">
+            <file name="ranger-bounty-hunter.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Martial-Ranger/main/ranger-bounty-hunter.xml" />
+        </update>
+    </info>
     
     <element name="Bounty Hunter" type="Archetype" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_RANGER_BOUNTY_HUNTER">
         <supports>Martial Ranger Archetype</supports>

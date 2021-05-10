@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+    <info>
+        <name></name>
+        <update version="4.1.0">
+            <file name="ranger-trapper.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Martial-Ranger/main/ranger-trapper.xml" />
+        </update>
+    </info>
     
     <element name="Trapper" type="Archetype" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_RANGER_TRAPPER">
         <supports>Martial Ranger Archetype</supports>

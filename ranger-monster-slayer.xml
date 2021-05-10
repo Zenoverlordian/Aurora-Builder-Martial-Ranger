@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+    <info>
+        <name></name>
+        <update version="4.1.0">
+            <file name="ranger-monster-slayer.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Martial-Ranger/main/ranger-monster-slayer.xml" />
+        </update>
+    </info>
     
     <element name="Monster Slayer" type="Archetype" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_RANGER_MONSTER_SLAYER">
         <supports>Martial Ranger Archetype</supports>
