@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name></name>
-        <update version="4.1.0">
+        <update version="5.1.0">
             <file name="ranger-trapper.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Martial-Ranger/main/ranger-trapper.xml" />
         </update>
     </info>
@@ -14,6 +14,7 @@
             <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_SNARECRAFTER" />
             <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_TRAP_FINDER" />
             <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_QUICK_SNARES" />
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_ENSNARING_WEAPONS" />
             <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_ADVANCED_SNARECRAFTER" />
             <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_SNARE_MASTER" />
         </description>
@@ -24,6 +25,7 @@
             <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_SNARECRAFTER" level="3" />
             <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_TRAP_FINDER" level="3" />
             <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_QUICK_SNARES" level="7" />
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_ENSNARING_WEAPONS" level="7" />
             <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_ADVANCED_SNARECRAFTER" level="11" />
             <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_SNARE_MASTER" level="15" />
         </rules>
@@ -65,12 +67,21 @@
             <description>You can craft snares that normally take 1 minute using one action. The snare is visible unless you use a bonus action to hide it, which requires a successful Stealth check against nearby enemies' passive Perception.</description>
         </sheet>
     </element>
+    <element name="Ensnaring Weapons" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_ENSNARING_WEAPONS">
+        <description>
+            <p>Starting at 7th level, you can make an attack with a net as a bonus action. You also gain proficiency with the bolas, a ranged martial weapon (range 20/60) that deals 1d4 damage on a hit and costs 5 gp. A creature hit by a bolas must make a Dexterity saving throw or be restrained and knocked prone. Escape follows the same rules as for a net, and the escape DC for both weapons becomes your snare DC.</p>
+        </description>
+        <sheet>
+            <description action="Bonus Action">You can make an attack with a net as a bonus action. You also gain proficiency with the bolas, a ranged martial weapon (range 20/60) that deals 1d4 damage on a hit and costs 5 gp. A creature hit by a bolas must make a Dexterity saving throw or be restrained and knocked prone. Escape follows the same rules as for a net, and the escape DC for both weapons becomes your snare DC.</description>
+        </sheet>
+    </element>
     <element name="Advanced Snarecrafter" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_ADVANCED_SNARECRAFTER">
         <description>
             <p>At 11th level, you begin to experiment with more powerful and dangerous snares. You learn how to craft two snares from the Advanced Snares list. You cannot use Quick Snares with Advanced Snares.</p>
+            <p class="incent">You can craft a number of Advanced Snares equal to your Wisdom modifier, and can only produce more after completing a long rest.</p>
         </description>
         <sheet>
-            <description>You cannot use Quick Snares with Advanced Snares.</description>
+            <description usage="{{wisdom:modifier}}/Long Rest">You cannot use Quick Snares with Advanced Snares. You can craft {{wisdom:modifier}} Advanced Snares per long rest.</description>
         </sheet>
         <rules>
             <select type="Archetype Feature" name="Advanced Snarecrafter" supports="Martial Advanced Snares" number="2" />
@@ -172,10 +183,10 @@
     <element name="Poison Dart Snare" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_ASNARE_POISON_DART">
         <supports>Martial Advanced Snares</supports>
         <description>
-            <p>A pressure plate or tripwire triggers a volley of poison-tipped darts. Each creature within a 10-foot radius of the snare must succeed at a Dexterity saving throw or take 1d4 piercing damage and 2d8 poison damage, and succeed at a Constitution saving throw or gain the poisoned condition for 1d4 rounds.</p>
+            <p>A pressure plate or tripwire triggers a volley of poison-tipped darts. Each creature within a 10-foot radius of the snare must succeed at a Dexterity saving throw or take 1d4 piercing damage and 2d8 poison damage, and succeed at a Constitution saving throw or gain the poisoned condition. It can repeat the save at the end of each of its turns, and is no longer poisoned on a success. A creature that succeeds is immune to this effect for 24 hours.</p>
         </description>
         <sheet>
-            <description>A pressure plate or tripwire triggers a volley of poison-tipped darts. Each creature within a 10-foot radius of the snare must succeed at a Dexterity saving throw or take 1d4 piercing damage and 2d8 poison damage, and succeed at a Constitution saving throw or gain the poisoned condition for 1d4 rounds.</description>
+            <description>A pressure plate or tripwire triggers a volley of poison-tipped darts. Each creature within a 10-foot radius of the snare must succeed at a Dexterity saving throw or take 1d4 piercing damage and 2d8 poison damage, and succeed at a Constitution saving throw or gain the poisoned condition. It can repeat the save at the end of each of its turns, and is no longer poisoned on a success. A creature that succeeds is immune to this effect for 24 hours.</description>
         </sheet>
     </element>
     <element name="Stunning Snare" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_TRAPPER_ASNARE_STUNNING">

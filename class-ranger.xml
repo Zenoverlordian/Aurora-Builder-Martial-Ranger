@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name></name>
-        <update version="4.1.0">
+        <update version="5.1.0">
             <file name="class-ranger.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Martial-Ranger/main/class-ranger.xml" />
         </update>
     </info>
@@ -68,8 +68,8 @@
         <tr><td> 9th</td><td>6</td><td class="left">Favored Terrain Master</td></tr>
         <tr><td>10th</td><td>6</td><td class="left">Nature's Veil, Favored Terrain improvement</td></tr>
         <tr><td>11th</td><td>7</td><td class="left">Ranger Archetype feature</td></tr>
-        <tr><td>12th</td><td>7</td><td class="left">Tireless Endurance, Ability Score Improvement</td></tr>
-        <tr><td>13th</td><td>8</td><td class="left">Split Focus</td></tr>
+        <tr><td>12th</td><td>7</td><td class="left">Ability Score Improvement</td></tr>
+        <tr><td>13th</td><td>8</td><td class="left">Tireless Endurance, Split Focus</td></tr>
         <tr><td>14th</td><td>8</td><td class="left">Favored Enemy improvement, Ability Score Improvement</td></tr>
         <tr><td>15th</td><td>9</td><td class="left">Ranger Archetype feature</td></tr>
         <tr><td>16th</td><td>9</td><td class="left">Ability Score Improvement</td></tr>
@@ -90,13 +90,13 @@
             <div element="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_EXTRA_ATTACK" />
             <div element="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_MARTIAL_TALENT" />
             <div element="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_ROVING" />
-            <div element="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_EVASION" />
+            <div element="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_HUNTERS_INSTINCT" />
             <div element="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_WILD_STRIDE" />
             <div element="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_FAVORED_TERRAIN_MASTER" />
             <div element="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_NATURES_VEIL" />
             <div element="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_TIRELESS_ENDURANCE" />
             <div element="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_SPLIT_FOCUS" />
-            <div element="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_FERAL_SENSES" />
+            <div element="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_KILLER_INSTINCT" />
             <div element="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_FOE_SLAYER" />
         </description>
         <setters>
@@ -126,13 +126,13 @@
             <grant type="Class Feature" id="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_EXTRA_ATTACK" level="5" />
             <grant type="Class Feature" id="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_MARTIAL_TALENT" level="5" />
             <grant type="Class Feature" id="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_ROVING" level="6" />
-            <grant type="Class Feature" id="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_EVASION" level="7" />
+            <grant type="Class Feature" id="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_HUNTERS_INSTINCT" level="7" />
             <grant type="Class Feature" id="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_WILD_STRIDE" level="8" />
             <grant type="Class Feature" id="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_FAVORED_TERRAIN_MASTER" level="9" />
             <grant type="Class Feature" id="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_NATURES_VEIL" level="10" />
-            <grant type="Class Feature" id="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_TIRELESS_ENDURANCE" level="12" />
+            <grant type="Class Feature" id="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_TIRELESS_ENDURANCE" level="13" />
             <grant type="Class Feature" id="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_SPLIT_FOCUS" level="13" />
-            <grant type="Class Feature" id="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_FERAL_SENSES" level="18" />
+            <grant type="Class Feature" id="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_KILLER_INSTINCT" level="18" />
             <grant type="Class Feature" id="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_FOE_SLAYER" level="20" />
         </rules>
         <multiclass id="ID_AGENDERARCEE_MULTICLASS_RANGER">
@@ -210,27 +210,9 @@
         </description>
         <sheet display="false" />
         <rules>
-            <select type="Class Feature" name="Fighting Style" supports="Fighting Style, Martial Ranger" />
+            <select type="Class Feature" name="Fighting Style" supports="Fighting Style, Ranger" />
         </rules>
     </element>
-    <append id="ID_WOTC_PHB_CLASS_FEATURE_FIGHTINGSTYLE_ARCHERY">
-        <supports>Martial Ranger</supports>
-    </append>
-    <append id="ID_WOTC_TCOE_CLASS_FEATURE_FIGHTING_STYLE_BLIND_FIGHTING">
-        <supports>Martial Ranger</supports>
-    </append>
-    <append id="ID_WOTC_PHB_CLASS_FEATURE_FIGHTINGSTYLE_DEFENSE">
-        <supports>Martial Ranger</supports>
-    </append>
-    <append id="ID_WOTC_PHB_CLASS_FEATURE_FIGHTINGSTYLE_DUELING">
-        <supports>Martial Ranger</supports>
-    </append>
-    <append id="ID_WOTC_TCOE_CLASS_FEATURE_FIGHTING_STYLE_THROWN_WEAPON_FIGHTING">
-        <supports>Martial Ranger</supports>
-    </append>
-    <append id="ID_WOTC_PHB_CLASS_FEATURE_FIGHTINGSTYLE_TWOWEAPON_FIGHTING">
-        <supports>Martial Ranger</supports>
-    </append>
     <element name="Natural Healer" type="Class Feature" source="The Martial Ranger" id="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_NATURAL_HEALER">
         <description>
             <p>Your experience surviving in the harsh wilderness has taught you how to identify and make use of medicinal plants. Starting at 2nd level, you may spend 1 hour a day searching a natural area for helpful herbs and fungi; this can count as part of a short or long rest. Roll a Wisdom (Survival) check against the DC corresponding to your environment. You have advantage on this check in your favored terrain.</p>
@@ -244,11 +226,11 @@
                 <tr><td>Arctic, Desert, Underdark</td><td>20</td></tr>
             </table>
             <p>On a success, you find enough herbs to produce a number of healing poultices equal to your Wisdom modifier. You must have an herbalism kit to produce these items, which must be done at the end of your search time as part of the same hour. On a failure, you can only produce a number equal to half your Wisdom modifier (rounded down).</p>
-            <p class="indent">Healing poultices are non-magical items which can be applied to an adjacent creature by any creature with Survival or Medicine proficiency, using an action or bonus action on their turn. The target creature regains hit points equal to 1d6 for every two levels you have in this class (rounded down) and loses the poisoned condition. The healing poultice is consumed by this use. Healing poultices lose their potency 24 hours after being produced.</p>
+            <p class="indent">Healing poultices are non-magical items which can be applied to an adjacent creature by any creature with Survival or Medicine proficiency, using an action on their turn. The target creature regains hit points equal to 1d6 for every two levels you have in this class (rounded down) and loses the poisoned condition. The healing poultice is consumed by this use. Healing poultices lose their potency 24 hours after being produced.</p>
         </description>
         <sheet>
             <description>You may spend 1 hour a day searching a natural area for helpful herbs and fungi; this can count as part of a short or long rest. Roll a Wisdom (Survival) check against the DC corresponding to your environment. You have advantage on this check in your favored terrain. On a success, you find enough herbs to produce {{wisdom:modifier}} healing poultices. You must have an herbalism kit to produce these items, which must be done at the end of your search time as part of the same hour. On a failure, you can only produce {{wisdom:modifier:half}}.
-            Healing poultices are non-magical items which can be applied to an adjacent creature by any creature with Survival or Medicine proficiency, using an action or bonus action on their turn. The target creature regains {{level:ranger (martial):half}}d6 hit points and loses the poisoned condition. The healing poultice is consumed by this use. Healing poultices lose their potency 24 hours after being produced.</description>
+            Healing poultices are non-magical items which can be applied to an adjacent creature by any creature with Survival or Medicine proficiency, using an action on their turn. The target creature regains {{level:ranger (martial):half}}d6 hit points and loses the poisoned condition. The healing poultice is consumed by this use. Healing poultices lose their potency 24 hours after being produced.</description>
         </sheet>
     </element>
     <element name="Ranger Archetype" type="Class Feature" source="The Martial Ranger" id="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_RANGER_ARCHETYPE">
@@ -318,7 +300,7 @@
     </element>
     <element name="Martial Talent" type="Class Feature" source="The Martial Ranger" id="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_MARTIAL_TALENT">
         <description>
-            <p>At 5th level, you become further specialized in a form of combat characteristic of rangers.</p>
+            <p>At 5th level, you become further specialized in a form of combat characteristic of rangers. Choose one of the following options:</p>
             <ul>
                 <li><strong><em>Far Shot.</em></strong> You gain a +2 bonus to attack rolls you make with ranged weapons. Double your ranged or thrown weapons’ range increments. (Attacking at long range still imposes disadvantage).</li>
                 <li><strong><em>Twin Takedown.</em></strong> When you engage in two-weapon fighting, you can make your offhand attack as part of the Attack action, instead of using your bonus action.</li>
@@ -360,13 +342,16 @@
             <stat name="speed:swim" value="speed" bonus="base" />
         </rules>
     </element>
-    <element name="Evasion" type="Class Feature" source="The Martial Ranger" id="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_EVASION">
+    <element name="Hunter's Instinct" type="Class Feature" source="The Martial Ranger" id="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_HUNTERS_INSTINCT">
         <description>
-            <p>Beginning at 7th level, you can nimbly dodge out of the way of certain area effects, such as a red dragon's fiery breath or an ice storm spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.</p>
+            <p>Starting at 7th level, your sharply honed instincts allow you to act quickly in the face of danger. You add a bonus to your initiative rolls equal to your Wisdom modifier.</p>
         </description>
         <sheet>
-            <description>When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.</description>
+            <description>You add a bonus to your initiative rolls equal to your Wisdom modifier.</description>
         </sheet>
+        <rules>
+            <stat name="initiative:misc" value="wisdom:modifier" />            
+        </rules>
     </element>
     <element name="Wild Stride" type="Class Feature" source="The Martial Ranger" id="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_WILD_STRIDE">
         <description>
@@ -394,15 +379,18 @@
     </element>
     <element name="Nature's Veil" type="Class Feature" source="The Martial Ranger" id="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_NATURES_VEIL">
         <description>
-            <p>Beginning at 10th level, you gain a +5 bonus to Stealth checks while in natural terrain, and advantage on Stealth checks in your favored terrain. You can also Hide as a bonus action in any terrain. You cannot be tracked by non-magical means in any terrain, unless you wish to leave a trail.</p>
+            <p>At 10th level, you gain proficiency in the Stealth skill. You have advantage on Stealth checks while in natural terrain, and you double your proficiency bonus for Stealth checks made in your favored terrain. You can also Hide as a bonus action in any terrain. You cannot be tracked by non-magical means in any terrain, unless you wish to leave a trail.</p>
         </description>
         <sheet>
-            <description>You gain a +5 bonus to Stealth checks while in natural terrain, and advantage on Stealth checks in your favored terrain. You can also Hide as a bonus action in any terrain. You cannot be tracked by non-magical means in any terrain, unless you wish to leave a trail.</description>
+            <description>You gain proficiency in the Stealth skill. You have advantage on Stealth checks while in natural terrain, and you double your proficiency bonus for Stealth checks made in your favored terrain. You can also Hide as a bonus action in any terrain. You cannot be tracked by non-magical means in any terrain, unless you wish to leave a trail.</description>
         </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_STEALTH" />
+        </rules>
     </element>
     <element name="Tireless Endurance" type="Class Feature" source="The Martial Ranger" id="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_TIRELESS_ENDURANCE">
         <description>
-            <p>At 12th level, you persist through pain, exhaustion, and even near-death. As an action, you can give yourself a number of temporary hit points equal to 1d10 + your Wisdom modifier (minimum of 1 temporary hit point). You can use this action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
+            <p>At 13th level, you persist through pain, exhaustion, and even near-death. As an action, you can give yourself a number of temporary hit points equal to 1d10 + your Wisdom modifier (minimum of 1 temporary hit point). You can use this action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
             <p class="indent">Whenever you finish a short rest, your exhaustion level, if any, is decreased by 1.</p>
             <p class="indent">In addition, if you are unconscious and have two death saving throw failures, you have advantage on your next death saving throw.</p>
         </description>
@@ -412,29 +400,28 @@
     </element>
     <element name="Split Focus" type="Class Feature" source="The Martial Ranger" id="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_SPLIT_FOCUS">
         <description>
-            <p>Starting at 13th level, you can focus on two foes at once, hunting both of them down. When you designate prey with Hunter's Prey, you can pick up to two creatures as your prey, and you can have two active prey simultaneously. These numbers increase to three at 17th level.</p>
+            <p>Starting at 13th level, you can focus on two foes at once, hunting both of them down. When you designate prey with Hunter's Prey, you can pick up to two creatures as your prey, and you can have two active prey simultaneously. This number increases to three at 17th level.</p>
+            <p class="indent">You may only use the free action granted by Favored Enemy if all of the creatures you designate as prey are favored enemies for you.</p>
         </description>
         <sheet>
-            <description level="13">When you designate prey with Hunter's Prey, you can pick up to two creatures as your prey, and you can have two active prey simultaneously.</description>
-            <description level="17">When you designate prey with Hunter's Prey, you can pick up to three creatures as your prey, and you can have three active prey simultaneously.</description>
+            <description level="13">When you designate prey with Hunter's Prey, you can pick up to two creatures as your prey, and you can have two active prey simultaneously. You may only use the free action granted by Favored Enemy if all of the creatures you designate as prey are favored enemies for you.</description>
+            <description level="17">When you designate prey with Hunter's Prey, you can pick up to three creatures as your prey, and you can have three active prey simultaneously. You may only use the free action granted by Favored Enemy if all of the creatures you designate as prey are favored enemies for you.</description>
         </sheet>
     </element>
-    <element name="Feral Senses" type="Class Feature" source="The Martial Ranger" id="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_FERAL_SENSES">
+    <element name="Killer Instinct" type="Class Feature" source="The Martial Ranger" id="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_KILLER_INSTINCT">
         <description>
-            <p>At 18th level, your senses have become so precise as to detect even what is invisible to you. When you attack a creature you can't see, your inability to see it doesn't impose disadvantage on your attack rolls against it.</p>
-            <p class="indent">You are also aware of the location of any invisible creature within 30 feet of you, provided that the creature isn't hidden from you and you aren't blinded and deafened.</p>
-            <p class="indent">Due to your heightened senses, you can act quickly in the face of danger. You add your Wisdom modifier to your initiative rolls, and you cannot be surprised in combat.</p>
+            <p>Beginning at 18th level, you can strike the most evasive of enemies, even those hiding behind obscured visibility or magical protection. Your attack rolls against creatures marked as your prey cannot have disadvantage.</p>
         </description>
         <sheet>
-            <description>When you attack a creature you can't see, your inability to see it doesn't impose disadvantage on your attack rolls against it. You are also aware of the location of any invisible creature within 30 feet of you, provided that the creature isn't hidden from you and you aren't blinded and deafened. Due to your heightened senses, you can act quickly in the face of danger. You add {{wisdom:modifier}} to your initiative rolls, and you cannot be surprised in combat.</description>
+            <description>Your attack rolls against creatures marked as your prey cannot have disadvantage.</description>
         </sheet>
     </element>
     <element name="Foe Slayer" type="Class Feature" source="The Martial Ranger" id="ID_AGENDERARCEE_CLASS_FEATURE_RANGER_FOE_SLAYER">
         <description>
-            <p>At 20th level, you become an unparalleled hunter of your enemies. Add your Wisdom modifier to all attack and damage rolls made against your Hunter's Prey, in addition to any normal modifiers.</p>
+            <p>At 20th level, you become an unparalleled hunter of your enemies. Add a bonus equal to your Wisdom modifier to all attacks rolls made against creatures marked as your prey.</p>
         </description>
         <sheet>
-            <description>Add {{wisdom:modifier}} to all attack and damage rolls made against your Hunter's Prey, in addition to any normal modifiers.</description>
+            <description>Add a bonus {{wisdom:modifier}} to all attacks rolls made against creatures marked as your prey.</description>
         </sheet>
     </element>
 
@@ -447,6 +434,7 @@
         </description>
         <sheet>
             <description level="1">When you make an Intelligence or Wisdom check related to this terrain or the creatures that dwell here, you have advantage on the check if you are using a skill that you’re proficient in. When in this terrain, you can ignore the effects of non-magical difficult terrain, and all enemies that attempt to track you by non-magical means have disadvantage. You can also move stealthily at a normal pace.</description>
+            <description level="9">When you make an Intelligence or Wisdom check related to this terrain or the creatures that dwell here, you have advantage on the check if you are using a skill that you’re proficient in. When in this terrain, you can ignore the effects of non-magical difficult terrain, and all enemies that attempt to track you by non-magical means have disadvantage. You can also move stealthily at a normal pace. You ignore the effects of extreme cold.</description>
         </sheet>
         <rules>
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD" level="9" />
@@ -487,6 +475,7 @@
         </description>
         <sheet>
             <description level="1">When you make an Intelligence or Wisdom check related to this terrain or the creatures that dwell here, you have advantage on the check if you are using a skill that you’re proficient in. When in this terrain, you can ignore the effects of non-magical difficult terrain, and all enemies that attempt to track you by non-magical means have disadvantage. You can also move stealthily at a normal pace.</description>
+            <description level="9">When you make an Intelligence or Wisdom check related to this terrain or the creatures that dwell here, you have advantage on the check if you are using a skill that you’re proficient in. When in this terrain, you can ignore the effects of non-magical difficult terrain, and all enemies that attempt to track you by non-magical means have disadvantage. You can also move stealthily at a normal pace. You don't suffer the effects of extreme heat.</description>
         </sheet>
         <rules>
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" level="9" />
@@ -602,11 +591,11 @@
     </element>
     <element name="Hunter's Eye" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HUNTER_HUNTERS_EYE">
         <description>
-            <p>At 3rd level, you become proficient in the Perception skill if you were not already. Double your proficiency bonus for any ability checks made using this skill.</p>
+            <p>At 3rd level, you gain proficiency in the Perception skill. If you were already proficient in Perception, double your proficiency bonus for any ability checks made using this skill.</p>
         </description>
         <sheet display="false" />
         <rules>
-            <stat name="perception:proficiency" value="proficiency" bonus="double" />
+            <grant type="Grant" id="ID_INTERNAL_GRANTS_PROFICIENCY_SKILL_OR_DOUBLE_PERCEPTION" />
         </rules>
     </element>
     <element name="Hunter's Quarry" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HUNTER_HUNTERS_QUARRY">
@@ -751,6 +740,15 @@
         </description>
         <sheet>
             <description action="Reaction">When an attacker that you can see hits you with an attack, you can use your reaction to halve the attack’s damage against you.</description>
+        </sheet>
+    </element>
+    <element name="Evasion" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HUNTER_SUPERIOR_HUNTERS_DEFENSE_EVASION">
+        <supports>Martial Hunter Superior Defense</supports>
+        <description>
+            <p>When you are subjected to an effect, such as a red dragon’s fiery breath or a lightning bolt spell, that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on a saving throw, and only half damage if you fail.</p>
+        </description>
+        <sheet>
+            <description>When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on a saving throw, and only half damage if you fail.</description>
         </sheet>
     </element>
 

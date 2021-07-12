@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name></name>
-        <update version="4.1.0">
+        <update version="5.1.0">
             <file name="ranger-gloom-stalker.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Martial-Ranger/main/ranger-gloom-stalker.xml" />
         </update>
     </info>
@@ -50,10 +50,11 @@
     </element>
     <element name="Shadow Sense" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_GLOOM_STALKER_SHADOW_SENSE">
         <description>
-            <p>Your senses are finely attuned to detect foes even when blinded or in magical darkness. At 7th level, you gain blindsight with a range of 10 feet, or an additional 10 feet if you already have blindsight. You also gain tremorsense with a range of 30 feet, or an additional 30 feet if you already have tremorsense.</p>
+            <p>Your senses are finely attuned to detect nearby foes even when blinded or in magical darkness. At 7th level, you gain blindsight with a range of 10 feet, or an additional 10 feet if you already have blindsight.</p>
+            <p class="indent">In addition, you can stand still, focus, and extend your senses further, picking up on the subtlest vibrations, even through walls. As an action, you can grant yourself tremorsense within a 30 foot radius. Moving or taking damage causes you to lose this sense. You can use this feature a number of times equal to your proficiency bonus, and regain all uses upon completing a long rest.</p>
         </description>
         <sheet>
-            <description>You gain blindsight with a range of 10 feet, or an additional 10 feet if you already have blindsight. You also gain tremorsense with a range of 30 feet, or an additional 30 feet if you already have tremorsense.</description>
+            <description action="Action" usage="{{proficiency}}/Long Rest">You gain blindsight with a range of 10 feet, or an additional 10 feet if you already have blindsight. In addition, as an action, you can grant yourself tremorsense within a 30 foot radius. Moving or taking damage causes you to lose this sense.</description>
         </sheet>
         <rules>
             <grant type="Grants" id="ID_VISION_BLINDSIGHT" />

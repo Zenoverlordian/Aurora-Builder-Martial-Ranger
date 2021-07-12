@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name></name>
-        <update version="4.1.0">
+        <update version="5.1.0">
             <file name="ranger-bounty-hunter.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Martial-Ranger/main/ranger-bounty-hunter.xml" />
         </update>
     </info>
@@ -69,18 +69,18 @@
     </element>
     <element name="Paranoid Vigilance" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BOUNTY_PARANOID_VIGILANCE">
         <description>
-            <p>Surrounded by potential threats in close quarters, you are constantly on alert and ready to fight. Starting at 7th level, you have advantage on initiative rolls. While you are surprised you can take reactions, and can take the Dodge action as a reaction when initiative is rolled. You also have advantage on attack rolls against creatures that are surprised.</p>
+            <p>Surrounded by potential threats in close quarters, you are constantly on alert and ready to fight. Starting at 7th level, you have advantage on initiative rolls, and you are never surprised in combat. You also have advantage on attack rolls against creatures that are surprised.</p>
         </description>
         <sheet>
-            <description>You have advantage on initiative rolls. While you are surprised you can take reactions, and can take the Dodge action as a reaction when initiative is rolled. You also have advantage on attack rolls against creatures that are surprised.</description>
+            <description>You have advantage on initiative rolls, and you are never surprised in combat. You also have advantage on attack rolls against creatures that are surprised.</description>
         </sheet>
     </element>
     <element name="Sneak Attacker" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BOUNTY_SNEAK_ATTACKER">
         <description>
-            <p>You strike without warning, dispatching your quarry before they can even see your face. Starting at 11th level, once per turn, you can deal an additional 2d6 damage to a creature with a weapon attack if you have advantage on the attack roll.</p>
+            <p>You strike without warning, dispatching your quarry before they can even see your face. Starting at 11th level, once per turn, you can deal an additional 2d6 damage to a creature with a weapon attack if you have advantage on the attack roll, or if a conscious ally is adjacent to your target and you do not have disadvantage.</p>
         </description>
         <sheet>
-            <description>Once per turn, you can deal an additional 2d6 damage to a creature with a weapon attack if you have advantage on the attack roll.</description>
+            <description>Once per turn, you can deal an additional 2d6 damage to a creature with a weapon attack if you have advantage on the attack roll, or if a conscious ally is adjacent to your target and you do not have disadvantage.</description>
         </sheet>
     </element>
     <element name="Eye for an Eye" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BOUNTY_EYE_FOR_AN_EYE">

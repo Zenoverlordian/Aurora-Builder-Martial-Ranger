@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name></name>
-        <update version="4.1.0">
+        <update version="5.1.0">
             <file name="ranger-monster-slayer.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Martial-Ranger/main/ranger-monster-slayer.xml" />
         </update>
     </info>
@@ -61,11 +61,11 @@
     </element>
     <element name="Magic-User's Nemesis" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_MONSTER_SLAYER_MAGIC_USERS_NEMESIS">
         <description>
-            <p>At 11th level, you gain the ability to thwart someone else's magic. When you see a creature casting a spell or teleporting within 60 feet of you, you can use your reaction to make an attack against that creature with a weapon you are holding. If the attack hits, the creature must succeed on a Constitution saving throw (DC = 8 + your Wisdom modifier + your proficiency bonus), or its spell or teleport fails and is wasted.</p>
-            <p class="indent">Once you use this feature, you can't use it again until you finish a short or long rest.</p>
+            <p>At 11th level, you gain the ability to thwart someone else's magic. When you see a creature casting a spell or teleporting within 60 feet of you, you can use your reaction to make an attack against that creature with a weapon you are holding.</p>
+            <p class="indent">If the attack hits, you can choose to force the creature to succeed on a Constitution saving throw (DC = 8 + your Wisdom modifier + your proficiency bonus) or its spell or teleport fails and is wasted. You regain use of this aspect of the feature after completing a long rest.</p>
         </description>
         <sheet>
-            <description action="Reaction" usage="1/Short Rest">When you see a creature casting a spell or teleporting within 60 feet of you, you can use your reaction to make an attack against that creature with a weapon you are holding. If the attack hits, the creature must succeed on a Constitution saving throw (DC {{mun:save}}), or its spell or teleport fails and is wasted.</description>
+            <description action="Reaction" usage="1/Long Rest">When you see a creature casting a spell or teleporting within 60 feet of you, you can use your reaction to make an attack against that creature with a weapon you are holding. If the attack hits, you can choose to force the creature to succeed on a Constitution saving throw (DC{{mun:save}}) or its spell or teleport fails and is wasted.</description>
         </sheet>
         <rules>
             <stat name="mun:save" value="8" />

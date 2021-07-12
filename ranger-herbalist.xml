@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name></name>
-        <update version="4.1.0">
+        <update version="5.1.0">
             <file name="ranger-herbalist.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Martial-Ranger/main/ranger-herbalist.xml" />
         </update>
     </info>
@@ -15,6 +15,7 @@
             <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_HERBAL_ADEPT" />
             <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_RESILIENT_CONSTITUTION" />
             <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_POISONER" />
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_COMBAT_HEALER" />
             <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_HERBAL_MASTER" />
         </description>
         <sheet display="false">
@@ -24,7 +25,8 @@
             <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_FORAGER" level="3" />
             <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_HERBAL_ADEPT" level="3" />
             <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_RESILIENT_CONSTITUTION" level="7" />
-            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_POISONER" level="11" />
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_POISONER" level="7" />
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_COMBAT_HEALER" level="7" />
             <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_HERBAL_MASTER" level="15" />
         </rules>
     </element>
@@ -42,13 +44,13 @@
     </element>
     <element name="Herbal Adept" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_HERBAL_ADEPT">
         <description>
-            <p>Starting at 3rd level, add your Wisdom modifier to the healing provided by healing poultices you produce. Your proficiency bonus is doubled for any skill check you make with an herbalist's kit, and you have proficiency in the Medicine skill if you did not already.</p>
+            <p>Starting at 3rd level, add your Wisdom modifier to the healing provided by healing poultices you produce. Your proficiency bonus is doubled for any skill check you make with an herbalist's kit, and you have proficiency in the Medicine skill if you did not already. If you were already proficient, double your proficiency bonus when you make a Medicine check.</p>
         </description>
         <sheet>
             <description>Add {{wisdom:modifier}} to the healing provided by healing poultices you produce. Your proficiency bonus is doubled for any skill check you make with an herbalist's kit.</description>
         </sheet>
         <rules>
-            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_MEDICINE" />
+            <grant type="Grant" id="ID_INTERNAL_GRANTS_PROFICIENCY_SKILL_OR_DOUBLE_MEDICINE" />
         </rules>
     </element>
     <element name="Resilient Constitution" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_RESILIENT_CONSTITUTION">
@@ -64,16 +66,24 @@
     </element>
     <element name="Poisoner" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_POISONER">
         <description>
-            <p>The studies of cures and poisons are inextricably linked, and you have learned how one can be repurposed into the other. Starting at 11th level, you can expend one healing poultice to craft a venomous coating for your weapons. For the next hour, when you hit a creature with a weapon attack, you can force the creature to make a Constitution saving throw (DC = 8 + your Wisdom modifier + your proficiency bonus). On a failed save, the creature is poisoned for 1d4 rounds. You can also use your herbalism kit to craft poisons.</p>
+            <p>Starting at 7th level, you can use your herbalism kit to craft poisons, as though it were a poisoner's kit.</p>
         </description>
         <sheet>
-            <description>You can expend one healing poultice to craft a venomous coating for your weapons. For the next hour, when you hit a creature with a weapon attack, you can force the creature to make a Constitution saving throw (DC {{poisoner:save}}). On a failed save, the creature is poisoned for 1d4 rounds. You can also use your herbalism kit to craft poisons.</description>
+            <description>You can use your herbalism kit to craft poisons, as though it were a poisoner's kit.</description>
         </sheet>
         <rules>
             <stat name="poisoner:save" value="8" />
             <stat name="poisoner:save" value="wisdom:modifier" />
             <stat name="poisoner:save" value="proficiency" />
         </rules>
+    </element>
+    <element name="Combat Healer" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_COMBAT_HEALER">
+        <description>
+            <p>You can heal and fight almost simultaneously. Starting at 11th level, when you use your action to apply a healing poultice, you can make one weapon attack as part of the same action.</p>
+        </description>
+        <sheet>
+            <description>When you use your action to apply a healing poultice, you can make one weapon attack as part of the same action.</description>
+        </sheet>
     </element>
     <element name="Herbal Master" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_HERBALIST_HERBAL_MASTER">
         <description>
