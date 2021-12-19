@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <index>
 	<info>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="martial-ranger.index" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Martial-Ranger/main/martial-ranger.index" />
 		</update>
 	</info>
@@ -14,5 +14,6 @@
     <file name="ranger-herbalist.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Martial-Ranger/main/ranger-herbalist.xml" />
     <file name="ranger-gloom-stalker.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Martial-Ranger/main/ranger-gloom-stalker.xml" />
     <file name="ranger-bounty-hunter.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Martial-Ranger/main/ranger-bounty-hunter.xml" />
+    <file name="ranger-beast-master.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Martial-Ranger/main/ranger-beast-master.xml" />
 	</files>
 </index>
