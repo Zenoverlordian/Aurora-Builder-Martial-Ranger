@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name></name>
+        <update version="5.1.0">
+            <file name="ranger-beast-master.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Martial-Ranger/main/ranger-beast-master.xml" />
+        </update>
+    </info>
+    
+    <element name="Beast Master" type="Archetype" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_RANGER_BEAST_MASTER">
+        <supports>Martial Ranger Archetype</supports>
+        <description>
+            <p>The Beast Master archetype embodies friendship between the civilized races and the beasts of the world. United in focus, beast and ranger work as one to fight the monstrous foes that threaten civilization and the wilderness alike. Emulating the Beast Master archetype means committing yourself to this ideal, working in partnership with an animal as its companion and friend.</p>
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BEAST_MASTER_RANGERS_COMPANION" />
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BEAST_MASTER_ANIMAL_WHISPERER" />
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BEAST_MASTER_EXCEPTIONAL_TRAINING" />
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BEAST_MASTER_BESTIAL_FURY" />
+            <div element="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BEAST_MASTER_SHARE_PREY" />
+        </description>
+        <sheet display="false">
+            <description>The Beast Master archetype embodies friendship between the civilized races and the beasts of the world.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BEAST_MASTER_RANGERS_COMPANION" level="3" />
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BEAST_MASTER_ANIMAL_WHISPERER" level="3" />
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BEAST_MASTER_EXCEPTIONAL_TRAINING" level="7" />
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BEAST_MASTER_BESTIAL_FURY" level="11" />
+            <grant type="Archetype Feature" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BEAST_MASTER_SHARE_PREY" level="15" />
+        </rules>
+    </element>
+    <element name="Ranger's Companion" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BEAST_MASTER_RANGERS_COMPANION">
+        <description>
+            <p>At 3rd level, you gain a beast companion that accompanies you on your adventures and is trained to fight alongside you. It is able to understand simple speech and commands. The beast grows along with you, using your proficiency bonus (PB) as its own. The beast can be created using the steps in Appendix A: Companion Creation. Choose traits that fit the type of creature you wish to bond with, or use one of the example stat blocks.</p>
+            <p class="indent">In combat, the beast acts during your turn. It can move and use its reaction and bonus action (if applicable) on its own, but the only action it takes is the Dodge action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. You can also sacrifice one of your attacks when you take the Attack action to command the beast to use an Attack, Dash, Disengage or Help action. If you are incapacitated, the beast can take any action of its choice, not just Dodge.</p>
+            <p class="indent">Like a player character, the beast becomes unconscious at 0 hit points and makes death saving throws. If the beast has died within the last hour, you can spend 1 minute using a healing poultice to revive it with half the hit points normally provided by the healing poultice.</p>
+            <p class="indent">The beast also follows all resting rules that apply to player characters, including the ability to roll Hit Dice to regain Hit Points on a short rest.</p>
+        </description>
+        <sheet>
+            <description>you gain a beast companion that accompanies you on your adventures and is trained to fight alongside you. It is able to understand simple speech and commands. The beast grows along with you, using your proficiency bonus (PB) as its own.
+            In combat, the beast acts during your turn. It can move and use its reaction and bonus action (if applicable) on its own, but the only action it takes is the Dodge action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. You can also sacrifice one of your attacks when you take the Attack action to command the beast to use an Attack, Dash, Disengage or Help action. If you are incapacitated, the beast can take any action of its choice, not just Dodge.
+            Like a player character, the beast becomes unconscious at 0 hit points and makes death saving throws. If the beast has died within the last hour, you can spend 1 minute using a healing poultice to revive it with half the hit points normally provided by the healing poultice. The beast also follows all resting rules that apply to player characters, including the ability to roll Hit Dice to regain Hit Points on a short rest.</description>
+        </sheet>
+        <rules>
+            <select type="Companion" name="Ranger's Companion" supports="Martial Rangers Companion" />
+        </rules>
+    </element>
+    <element name="Animal Whisperer" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BEAST_MASTER_ANIMAL_WHISPERER">
+        <description>
+            <p>At 3rd level, you become proficient in Animal Handling if you weren't already. Double your proficiency bonus for ability checks made using this skill.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="animal handling:proficiency" value="proficiency" bonus="double" />
+        </rules>
+    </element>
+    <element name="Exceptional Training" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BEAST_MASTER_EXCEPTIONAL_TRAINING">
+        <description>
+            <p>Beginning at 7th level, your beast companion can use the Help action instead of the Dodge action on any turn in which you did not give it a command. In addition, the beast’s attacks now count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.</p>
+        </description>
+        <sheet>
+            <description>Your beast companion can use the Help action instead of the Dodge action on any turn in which you did not give it a command. In addition, the beast’s attacks now count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.</description>
+        </sheet>
+    </element>
+    <element name="Bestial Fury" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BEAST_MASTER_BESTIAL_FURY">
+        <description>
+            <p>Starting at 11th level, when you command your beast companion to take the Attack action, the beast can make two attacks.</p>
+        </description>
+        <sheet>
+            <description>When you command your beast companion to take the Attack action, the beast can make two attacks.</description>
+        </sheet>
+    </element>
+    <element name="Share Prey" type="Archetype Feature" source="The Martial Ranger" id="ID_AGENERARCEE_ARCHETYPE_FEATURE_RANGER_BEAST_MASTER_SHARE_PREY">
+        <description>
+            <p>Beginning at 15th level, your beast companion shares the benefits of Hunter's Prey when attacking or tracking any creature you have marked as your prey.</p>
+        </description>
+        <sheet>
+            <description>Your beast companion shares the benefits of Hunter's Prey when attacking or tracking any creature you have marked as your prey.</description>
+        </sheet>
+    </element>
+
+    <!--COMPANIONS-->
+
+    <element name="Big Cat" type="Companion" source="The Martial Ranger" id="ID_AGENERARCEE_COMPANION_BIG_CAT">
+		<supports>Martial Rangers Companion</supports>
+		<setters>
+			<set name="strength">16</set>
+			<set name="dexterity">14</set>
+			<set name="constitution">14</set>
+			<set name="intelligence">6</set>
+			<set name="wisdom">14</set>
+			<set name="charisma">11</set>
+			<set name="ac">10 + PB + its DEX mod (natural armor)</set>
+			<set name="hp">5 + (5 x Ranger Level)</set>
+			<set name="speed">40 ft., swim 10 ft.</set>
+			<set name="senses">darkvision 60 ft., passive Perception 14</set>
+			<set name="languages">Can understand simple commands in languages you know of your choice.</set>
+			<set name="type">Beast</set>
+			<set name="size">Medium</set>
+			<set name="alignment">neutral</set>
+			<set name="challenge">1</set>
+			<set name="traits">ID_AGENERARCEE_COMPANION_TRAIT_KEEN_SMELL,ID_AGENERARCEE_COMPANION_TRAIT_KEEN_SIGHT,ID_AGENERARCEE_COMPANION_TRAIT_STANDING_LEAP,ID_AGENERARCEE_COMPANION_TRAIT_POUNCE,ID_AGENERARCEE_COMPANION_TRAIT_SECOND_WIND</set>
+			<set name="actions">ID_AGENERARCEE_COMPANION_ACTION_BITE,ID_AGENERARCEE_COMPANION_ACTION_CLAW</set>
+		</setters>
+		<rules>
+			<stat name="companion:ac" value="12" bonus="base" />
+            <stat name="companion:ac" value="proficiency" />
+			<stat name="companion:hp:max" value="5" />
+			<stat name="companion:hp:max" value="level:ranger (martial)" />
+			<stat name="companion:hp:max" value="level:ranger (martial)" />
+			<stat name="companion:hp:max" value="level:ranger (martial)" />
+			<stat name="companion:hp:max" value="level:ranger (martial)" />
+			<stat name="companion:hp:max" value="level:ranger (martial)" />
+			<stat name="companion:speed" value="40" bonus="base" />	
+            <stat name="companion:speed:swim" value="10" bonus="base" />	
+			<stat name="companion:proficiency" value="proficiency" bonus="base" />
+            <stat name="companion:proficiency" value="-2" bonus="base companion PB removal"/>
+			<stat name="companion:perception:proficiency" value="companion:proficiency" bonus="proficiency" />
+			<stat name="companion:survival:proficiency" value="companion:proficiency" bonus="proficiency" />
+			<stat name="companion:stealth:proficiency" value="companion:proficiency" bonus="proficiency" />
+            <stat name="companion:athletics:proficiency" value="companion:proficiency" bonus="proficiency" />
+			<stat name="companion:dexterity:save:proficiency" value="companion:proficiency" bonus="proficiency" />
+			<stat name="companion:strength:save:proficiency" value="companion:proficiency" bonus="proficiency" />
+		</rules>
+	</element>
+
+    <element name="Hound" type="Companion" source="The Martial Ranger" id="ID_AGENERARCEE_COMPANION_HOUND">
+		<supports>Martial Rangers Companion</supports>
+		<setters>
+			<set name="strength">16</set>
+			<set name="dexterity">14</set>
+			<set name="constitution">14</set>
+			<set name="intelligence">6</set>
+			<set name="wisdom">14</set>
+			<set name="charisma">11</set>
+			<set name="ac">10 + PB + its DEX mod (natural armor)</set>
+			<set name="hp">5 + (5 x Ranger Level)</set>
+			<set name="speed">40 ft., swim 10 ft.</set>
+			<set name="senses">darkvision 60 ft., passive Perception 14</set>
+			<set name="languages">Can understand simple commands in languages you know of your choice.</set>
+			<set name="type">Beast</set>
+			<set name="size">Small</set>
+			<set name="alignment">neutral</set>
+			<set name="challenge">1</set>
+			<set name="traits">ID_AGENERARCEE_COMPANION_TRAIT_KEEN_SMELL,ID_AGENERARCEE_COMPANION_TRAIT_KEEN_SIGHT,ID_AGENERARCEE_COMPANION_TRAIT_RUNNING_LEAP,ID_AGENERARCEE_COMPANION_TRAIT_PACK_TACTICS,ID_AGENERARCEE_COMPANION_TRAIT_RELENTLESS</set>
+			<set name="actions">ID_AGENERARCEE_COMPANION_ACTION_BITE,ID_AGENERARCEE_COMPANION_ACTION_CLAW</set>
+		</setters>
+		<rules>
+			<stat name="companion:ac" value="12" bonus="base" />
+            <stat name="companion:ac" value="proficiency" />
+			<stat name="companion:hp:max" value="5" />
+			<stat name="companion:hp:max" value="level:ranger (martial)" />
+			<stat name="companion:hp:max" value="level:ranger (martial)" />
+			<stat name="companion:hp:max" value="level:ranger (martial)" />
+			<stat name="companion:hp:max" value="level:ranger (martial)" />
+			<stat name="companion:hp:max" value="level:ranger (martial)" />
+			<stat name="companion:speed" value="40" bonus="base" />	
+            <stat name="companion:speed:swim" value="10" bonus="base" />	
+			<stat name="companion:proficiency" value="proficiency" bonus="base" />
+            <stat name="companion:proficiency" value="-2" bonus="base companion PB removal"/>
+			<stat name="companion:perception:proficiency" value="companion:proficiency" bonus="proficiency" />
+			<stat name="companion:survival:proficiency" value="companion:proficiency" bonus="proficiency" />
+			<stat name="companion:intimidation:proficiency" value="companion:proficiency" bonus="proficiency" />
+            <stat name="companion:athletics:proficiency" value="companion:proficiency" bonus="proficiency" />
+			<stat name="companion:dexterity:save:proficiency" value="companion:proficiency" bonus="proficiency" />
+			<stat name="companion:strength:save:proficiency" value="companion:proficiency" bonus="proficiency" />
+		</rules>
+	</element>
+
+    <element name="Falcon" type="Companion" source="The Martial Ranger" id="ID_AGENERARCEE_COMPANION_FALCON">
+		<supports>Martial Rangers Companion</supports>
+		<setters>
+			<set name="strength">13</set>
+			<set name="dexterity">16</set>
+			<set name="constitution">13</set>
+			<set name="intelligence">6</set>
+			<set name="wisdom">14</set>
+			<set name="charisma">11</set>
+			<set name="ac">10 + PB + its DEX mod (natural armor)</set>
+			<set name="hp">4 + (4 x Ranger Level)</set>
+			<set name="speed">10 ft., fly 60 ft.</set>
+			<set name="senses">darkvision 60 ft., passive Perception 14</set>
+			<set name="languages">Can understand simple commands in languages you know of your choice.</set>
+			<set name="type">Beast</set>
+			<set name="size">tiny</set>
+			<set name="alignment">neutral</set>
+			<set name="challenge">1</set>
+			<set name="traits">ID_AGENERARCEE_COMPANION_TRAIT_KEEN_SMELL,ID_AGENERARCEE_COMPANION_TRAIT_KEEN_SIGHT,ID_AGENERARCEE_COMPANION_TRAIT_FLYBY,ID_AGENERARCEE_COMPANION_TRAIT_DIVE,ID_AGENERARCEE_COMPANION_TRAIT_RELENTLESS</set>
+			<set name="actions">ID_AGENERARCEE_COMPANION_ACTION_BITE,ID_AGENERARCEE_COMPANION_ACTION_CLAW</set>
+		</setters>
+		<rules>
+			<stat name="companion:ac" value="12" bonus="base" />
+            <stat name="companion:ac" value="proficiency" />
+			<stat name="companion:hp:max" value="4" />
+			<stat name="companion:hp:max" value="level:ranger (martial)" />
+			<stat name="companion:hp:max" value="level:ranger (martial)" />
+			<stat name="companion:hp:max" value="level:ranger (martial)" />
+			<stat name="companion:hp:max" value="level:ranger (martial)" />
+			<stat name="companion:speed" value="10" bonus="base" />	
+            <stat name="companion:speed:fly" value="60" bonus="base" />	
+			<stat name="companion:proficiency" value="proficiency" bonus="base" />
+            <stat name="companion:proficiency" value="-2" bonus="base companion PB removal"/>
+			<stat name="companion:perception:proficiency" value="companion:proficiency" bonus="proficiency" />
+			<stat name="companion:survival:proficiency" value="companion:proficiency" bonus="proficiency" />
+			<stat name="companion:stealth:proficiency" value="companion:proficiency" bonus="proficiency" />
+            <stat name="companion:acrobatics:proficiency" value="companion:proficiency" bonus="proficiency" />
+			<stat name="companion:dexterity:save:proficiency" value="companion:proficiency" bonus="proficiency" />
+			<stat name="companion:strength:save:proficiency" value="companion:proficiency" bonus="proficiency" />
+		</rules>
+	</element>
+
+    <element name="Boar" type="Companion" source="The Martial Ranger" id="ID_AGENERARCEE_COMPANION_BOAR">
+		<supports>Martial Rangers Companion</supports>
+		<setters>
+			<set name="strength">16</set>
+			<set name="dexterity">14</set>
+			<set name="constitution">14</set>
+			<set name="intelligence">6</set>
+			<set name="wisdom">14</set>
+			<set name="charisma">11</set>
+			<set name="ac">10 + PB + its DEX mod (natural armor)</set>
+			<set name="hp">5 + (5 x Ranger Level)</set>
+			<set name="speed">40 ft., swim 10 ft.</set>
+			<set name="senses">darkvision 60 ft., passive Perception 14</set>
+			<set name="languages">Can understand simple commands in languages you know of your choice.</set>
+			<set name="type">Beast</set>
+			<set name="size">Medium</set>
+			<set name="alignment">neutral</set>
+			<set name="challenge">1</set>
+			<set name="traits">ID_AGENERARCEE_COMPANION_TRAIT_KEEN_SMELL,ID_AGENERARCEE_COMPANION_TRAIT_KEEN_HEARING,ID_AGENERARCEE_COMPANION_TRAIT_SUREFOOTED,ID_AGENERARCEE_COMPANION_TRAIT_CHARGE,ID_AGENERARCEE_COMPANION_TRAIT_RELENTLESS</set>
+			<set name="actions">ID_AGENERARCEE_COMPANION_ACTION_PUMMEL,ID_AGENERARCEE_COMPANION_ACTION_GORE</set>
+		</setters>
+		<rules>
+			<stat name="companion:ac" value="12" bonus="base" />
+            <stat name="companion:ac" value="proficiency" />
+			<stat name="companion:hp:max" value="5" />
+			<stat name="companion:hp:max" value="level:ranger (martial)" />
+			<stat name="companion:hp:max" value="level:ranger (martial)" />
+			<stat name="companion:hp:max" value="level:ranger (martial)" />
+			<stat name="companion:hp:max" value="level:ranger (martial)" />
+			<stat name="companion:hp:max" value="level:ranger (martial)" />
+			<stat name="companion:speed" value="40" bonus="base" />	
+            <stat name="companion:speed:swim" value="10" bonus="base" />	
+			<stat name="companion:proficiency" value="proficiency" bonus="base" />
+            <stat name="companion:proficiency" value="-2" bonus="base companion PB removal"/>
+			<stat name="companion:perception:proficiency" value="companion:proficiency" bonus="proficiency" />
+			<stat name="companion:survival:proficiency" value="companion:proficiency" bonus="proficiency" />
+			<stat name="companion:intimidation:proficiency" value="companion:proficiency" bonus="proficiency" />
+            <stat name="companion:athletics:proficiency" value="companion:proficiency" bonus="proficiency" />
+			<stat name="companion:dexterity:save:proficiency" value="companion:proficiency" bonus="proficiency" />
+			<stat name="companion:strength:save:proficiency" value="companion:proficiency" bonus="proficiency" />
+		</rules>
+	</element>
+
+    <element name="Giant Toad" type="Companion" source="The Martial Ranger" id="ID_AGENERARCEE_COMPANION_GIANT_TOAD">
+		<supports>Martial Rangers Companion</supports>
+		<setters>
+			<set name="strength">16</set>
+			<set name="dexterity">14</set>
+			<set name="constitution">14</set>
+			<set name="intelligence">6</set>
+			<set name="wisdom">14</set>
+			<set name="charisma">11</set>
+			<set name="ac">10 + PB + its DEX mod (natural armor)</set>
+			<set name="hp">5 + (5 x Ranger Level)</set>
+			<set name="speed">40 ft., swim 10 ft.</set>
+			<set name="senses">darkvision 60 ft., passive Perception 14</set>
+			<set name="languages">Can understand simple commands in languages you know of your choice.</set>
+			<set name="type">Beast</set>
+			<set name="size">Small</set>
+			<set name="alignment">neutral</set>
+			<set name="challenge">1</set>
+			<set name="traits">ID_AGENERARCEE_COMPANION_TRAIT_KEEN_SMELL,ID_AGENERARCEE_COMPANION_TRAIT_KEEN_SIGHT,ID_AGENERARCEE_COMPANION_TRAIT_STANDING_LEAP,ID_AGENERARCEE_COMPANION_TRAIT_POUNCE,ID_AGENERARCEE_COMPANION_TRAIT_SECOND_WIND</set>
+			<set name="actions">ID_AGENERARCEE_COMPANION_ACTION_PUMMEL,ID_AGENERARCEE_COMPANION_ACTION_TONGUE</set>
+		</setters>
+		<rules>
+			<stat name="companion:ac" value="12" bonus="base" />
+            <stat name="companion:ac" value="proficiency" />
+			<stat name="companion:hp:max" value="5" />
+			<stat name="companion:hp:max" value="level:ranger (martial)" />
+			<stat name="companion:hp:max" value="level:ranger (martial)" />
+			<stat name="companion:hp:max" value="level:ranger (martial)" />
+			<stat name="companion:hp:max" value="level:ranger (martial)" />
+			<stat name="companion:hp:max" value="level:ranger (martial)" />
+			<stat name="companion:speed" value="40" bonus="base" />	
+            <stat name="companion:speed:swim" value="10" bonus="base" />	
+			<stat name="companion:proficiency" value="proficiency" bonus="base" />
+            <stat name="companion:proficiency" value="-2" bonus="base companion PB removal"/>
+			<stat name="companion:perception:proficiency" value="companion:proficiency" bonus="proficiency" />
+			<stat name="companion:survival:proficiency" value="companion:proficiency" bonus="proficiency" />
+			<stat name="companion:stealth:proficiency" value="companion:proficiency" bonus="proficiency" />
+            <stat name="companion:athletics:proficiency" value="companion:proficiency" bonus="proficiency" />
+			<stat name="companion:dexterity:save:proficiency" value="companion:proficiency" bonus="proficiency" />
+			<stat name="companion:strength:save:proficiency" value="companion:proficiency" bonus="proficiency" />
+		</rules>
+	</element>
+
+    <!--COMPANION FEATURES-->
+
+    <element name="Keen Smell" type="Companion Trait" source="The Martial Ranger" id="ID_AGENERARCEE_COMPANION_TRAIT_KEEN_SMELL">
+        <description>
+            <p>The beast has advantage on Wisdom (Perception) checks that rely on smell.</p>
+        </description>
+        <sheet>
+            <description>The beast has advantage on Wisdom (Perception) checks that rely on smell.</description>
+        </sheet>
+    </element>
+    <element name="Keen Sight" type="Companion Trait" source="The Martial Ranger" id="ID_AGENERARCEE_COMPANION_TRAIT_KEEN_SIGHT">
+        <description>
+            <p>The beast has advantage on Wisdom (Perception) checks that rely on sight.</p>
+        </description>
+        <sheet>
+            <description>The beast has advantage on Wisdom (Perception) checks that rely on sight.</description>
+        </sheet>
+    </element>
+    <element name="Standing Leap" type="Companion Trait" source="The Martial Ranger" id="ID_AGENERARCEE_COMPANION_TRAIT_STANDING_LEAP">
+        <description>
+            <p>The beast's long jump is up to 10 feet and its high jump is up to 5 feet, with or without a running start.</p>
+        </description>
+        <sheet>
+            <description>The beast's long jump is up to 10 feet and its high jump is up to 5 feet, with or without a running start.</description>
+        </sheet>
+    </element>
+    <element name="Pounce" type="Companion Trait" source="The Martial Ranger" id="ID_AGENERARCEE_COMPANION_TRAIT_POUNCE">
+        <description>
+            <p>If the beast makes a long jump at least 10 feet straight toward a target and then hits it with a natural weapon on the same turn, the target takes an extra 1d6 damage. If the target is a creature, it must succeed on a DC 12 Dexterity saving throw or be knocked prone.</p>
+        </description>
+        <sheet>
+            <description>If the beast makes a long jump at least 10 feet straight toward a target and then hits it with a natural weapon on the same turn, the target takes an extra 1d6 damage. If the target is a creature, it must succeed on a DC 12 Dexterity saving throw or be knocked prone.</description>
+        </sheet>
+    </element>
+    <element name="Second Wind (Recharges after Short or Long Rest)" type="Companion Trait" source="The Martial Ranger" id="ID_AGENERARCEE_COMPANION_TRAIT_SECOND_WIND">
+        <description>
+            <p>The beast can use a bonus action to regain hit points equal to 1d6 + your ranger level.</p>
+        </description>
+        <sheet>
+            <description>The beast can use a bonus action to regain 1d6 + your ranger level hit points.</description>
+        </sheet>
+    </element>
+    <element name="Running Leap" type="Companion Trait" source="The Martial Ranger" id="ID_AGENERARCEE_COMPANION_TRAIT_RUNNING_LEAP">
+        <description>
+            <p>With a 10-foot running start, the beast can long jump up to 25 feet.</p>
+        </description>
+        <sheet>
+            <description>With a 10-foot running start, the hound can long jump up to 25 feet.</description>
+        </sheet>
+    </element>
+    <element name="Pack Tactics" type="Companion Trait" source="The Martial Ranger" id="ID_AGENERARCEE_COMPANION_TRAIT_PACK_TACTICS">
+        <description>
+            <p>The beast has advantage on attack rolls against a creature if at least one of the hound's allies is within 5 feet of the creature and the ally isn't incapacitated.</p>
+        </description>
+        <sheet>
+            <description>The beast has advantage on attack rolls against a creature if at least one of the hound's allies is within 5 feet of the creature and the ally isn't incapacitated.</description>
+        </sheet>
+    </element>
+    <element name="Relentless (Recharges after Short or Long Rest)" type="Companion Trait" source="The Martial Ranger" id="ID_AGENERARCEE_COMPANION_TRAIT_RELENTLESS">
+        <description>
+            <p>If the beast takes damage less than 3 + your ranger level that would reduce it to 0 hit points, it is reduced to 1 hit point instead.</p>
+        </description>
+        <sheet>
+            <description>If the beast takes damage less than 3 + your ranger level that would reduce it to 0 hit points, it is reduced to 1 hit point instead.</description>
+        </sheet>
+    </element>
+    <element name="Flyby" type="Companion Trait" source="The Martial Ranger" id="ID_AGENERARCEE_COMPANION_TRAIT_FLYBY">
+        <description>
+            <p>The beast doesn't provoke opportunity attacks when it flies out of an enemy's reach.</p>
+        </description>
+        <sheet>
+            <description>The beast doesn't provoke opportunity attacks when it flies out of an enemy's reach.</description>
+        </sheet>
+    </element>
+    <element name="Dive" type="Companion Trait" source="The Martial Ranger" id="ID_AGENERARCEE_COMPANION_TRAIT_DIVE">
+        <description>
+            <p>If the beast flies at least 30 feet downward toward a target and then hits it with a natural weapon on the same turn, the target takes an extra 1d6 damage. If the target is a creature, it must succeed on a DC 12 Constitution saving throw or be stunned until the end of its next turn.</p>
+        </description>
+        <sheet>
+            <description>If the beast flies at least 30 feet downward toward a target and then hits it with a natural weapon on the same turn, the target takes an extra 1d6 damage. If the target is a creature, it must succeed on a DC 12 Constitution saving throw or be stunned until the end of its next turn.</description>
+        </sheet>
+    </element>
+    <element name="Keen Hearing" type="Companion Trait" source="The Martial Ranger" id="ID_AGENERARCEE_COMPANION_TRAIT_KEEN_HEARING">
+        <description>
+            <p>The beast has advantage on Wisdom (Perception) checks that rely on hearing.</p>
+        </description>
+        <sheet>
+            <description>The beast has advantage on Wisdom (Perception) checks that rely on hearing.</description>
+        </sheet>
+    </element>
+    <element name="Sure-Footed" type="Companion Trait" source="The Martial Ranger" id="ID_AGENERARCEE_COMPANION_TRAIT_SUREFOOTED">
+        <description>
+            <p>The beast has advantage on Strength and Dexterity saving throws made against effects that would knock it prone.</p>
+        </description>
+        <sheet>
+            <description>The beast has advantage on Strength and Dexterity saving throws made against effects that would knock it prone.</description>
+        </sheet>
+    </element>
+    <element name="Charge" type="Companion Trait" source="The Martial Ranger" id="ID_AGENERARCEE_COMPANION_TRAIT_CHARGE">
+        <description>
+            <p>If the beast moves at least 20 feet straight toward a target and then hits it with a natural weapon on the same turn, the target takes an extra 1d6 damage. If the target is a creature, it must succeed on a DC 10+PB Strength saving throw or be knocked prone.</p>
+        </description>
+        <sheet>
+            <description>If the beast moves at least 20 feet straight toward a target and then hits it with a natural weapon on the same turn, the target takes an extra 1d6 damage. If the target is a creature, it must succeed on a DC 10+PB Strength saving throw or be knocked prone.</description>
+        </sheet>
+    </element>
+
+    <element name="Bite" type="Companion Action" source="The Martial Ranger" id="ID_AGENERARCEE_COMPANION_ACTION_BITE">
+        <description>
+            <p>Melee weapon attack: STR + proficiency, reach 5 ft., one target. Hit: 1d8 + STR piercing damage. If the beast hits a target with a bite attack, it can use its bonus action to attempt to grapple that target.</p>
+        </description>
+        <sheet>
+            <description>Melee weapon attack: STR + PB, reach 5 ft., one target. Hit: 1d8 + STR piercing damage. If the beast hits a target with a bite attack, it can use its bonus action to attempt to grapple that target.</description>
+        </sheet>
+    </element>
+    <element name="Claw" type="Companion Action" source="The Martial Ranger" id="ID_AGENERARCEE_COMPANION_ACTION_CLAW">
+        <description>
+            <p>Melee weapon attack: STR + proficiency, reach 5 ft., one target. Hit: 1d4 + STR slashing damage. If the beast makes a claw attack using its action, it can make another claw attack as a bonus action.</p>
+        </description>
+        <sheet>
+            <description>Melee weapon attack: STR + PB, reach 5 ft., one target. Hit: 1d8 + STR piercing damage. If the beast makes a claw attack using its action, it can make another claw attack as a bonus action.</description>
+        </sheet>
+    </element>
+    <element name="Pummel" type="Companion Action" source="The Martial Ranger" id="ID_AGENERARCEE_COMPANION_ACTION_PUMMEL">
+        <description>
+            <p>Melee weapon attack: STR + PB, reach 5 ft., one target. Hit: 1d6 + STR bludgeoning damage. If the beast hits a target with a pummel attack, it can use its bonus action to attempt to shove that target.</p>
+        </description>
+        <sheet>
+            <description>Melee weapon attack: STR + PB, reach 5 ft., one target. Hit: 1d8 + STR bludgeoning damage. If the beast hits a target with a pummel attack, it can use its bonus action to attempt to shove that target.</description>
+        </sheet>
+    </element>
+    <element name="Gore" type="Companion Action" source="The Martial Ranger" id="ID_AGENERARCEE_COMPANION_ACTION_GORE">
+        <description>
+            <p>Melee weapon attack: STR + PB, reach 5 ft., one target. Hit: 1d6 + STR piercing damage. If the beast uses Charge on this attack, the damage die increases to a d12.</p>
+        </description>
+        <sheet>
+            <description>Melee weapon attack: STR + PB, reach 5 ft., one target. Hit: 1d8 + STR piercing damage. If the beast uses Charge on this attack, the damage die increases to a d12.</description>
+        </sheet>
+    </element>
+    <element name="Tongue" type="Companion Action" source="The Martial Ranger" id="ID_AGENERARCEE_COMPANION_ACTION_TONGUE">
+        <description>
+            <p>Melee weapon attack: STR + PB, reach 5 ft., one target. Hit: 1d6 + STR bludgeoning damage.</p>
+        </description>
+        <sheet>
+            <description>Melee weapon attack: STR + PB, reach 5 ft., one target. Hit: 1d8 + STR bludgeoning damage.</description>
+        </sheet>
+    </element>
+    
+</elements>
